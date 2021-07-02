@@ -11,5 +11,13 @@ export class UserProfileComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  addGuest(adi: string,soyadi: string, tckimlikno: number)
+  {
+    console.log(adi);
+    console.log(soyadi);
+    console.log(tckimlikno);
+
+  }
  
 }
