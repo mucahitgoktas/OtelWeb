@@ -17,24 +17,27 @@
 -->
 <!doctype html>
 <html>
+
 <head>
-    <base href='/'>
-    <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
-    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <base href='/'>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png" />
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Material Dashboard Angular by Creative Tim</title>
+  <title>Material Dashboard Angular by Creative Tim</title>
 
-    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width" />
 
-    <!--     Fonts and icons     -->
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR-KEY-HERE"></script>
+  <!--     Fonts and icons     -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet'
+    type='text/css'>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR-KEY-HERE"></script>
 
 </head>
+
 <body>
   <div class="card">
     <div class="card-header card-header-danger">
@@ -43,26 +46,29 @@
     </div>
     <div class="card-content table-responsive table-full-width">
       <table class="table">
-        <thead class="text-danger">
-          <th>Durumu</th>
-          <th>Oda No</th>
-          <th>Misafirin Adı Soyadı</th>
-          <th>Gecelik Ücret</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Konaklayan</td>
-            <td>121</td>
-            <td>Fikri Şahin</td>
-            <td class="text-danger">90₺</td>
-          </tr>
-          <tr>
-            <td>Çıkış Yaptı</td>
-            <td>101</td>
-            <td>Ender Küçük</td>
-            <td class="text-danger">-</td>
-          </tr>
-        </tbody>  
+          <thead class="text-danger">
+              <th>Durumu</th>
+              <th>Oda No</th>
+              <th>Misafirin Adı Soyadı</th>
+              <th>Gecelik Ücret</th>
+              <th></th>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Konaklayan</td>
+                  <td>121</td>
+                  <td>Fikri Şahin</td>
+                  <td class="text-danger">90₺</td>
+                  <td><button mat-raised-button class="btn btn-info">Düzenle</button>
+                      <button mat-raised-button class="btn btn-danger">Sil</button>
+                  </td>
+  
+              </tr>
+          </tbody>
+      </table>
+  </div>
+  </div>
+  
   <!-- <app-root>
     <div class="loader">
       <svg class="circular" viewBox="25 25 50 50">
