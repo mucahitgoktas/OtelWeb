@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace ServerApp.Models
+namespace ServerApp.DTO
 {
-    public class Guest
+    public class GuestDTO
     {
         [Key]
         public int GuestId { get; set; }
@@ -10,6 +10,5 @@ namespace ServerApp.Models
         public string Soyadi { get; set; }
         public string TcKimlikNo { get; set; } 
         public string HesKodu { get; set; }
-        public string Secret { get; set; }
     }
 }
