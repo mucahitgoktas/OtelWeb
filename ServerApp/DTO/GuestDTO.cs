@@ -1,6 +1,4 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace ServerApp.DTO
+namespace DTO
 {
     public class GuestDTO
     {
@@ -10,5 +8,6 @@ namespace ServerApp.DTO
         public string Soyadi { get; set; }
         public string TcKimlikNo { get; set; } 
         public string HesKodu { get; set; }
+        
     }
 }
