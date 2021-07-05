@@ -12,4 +12,8 @@ export class MevcutKonaklayanlarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  title = 'Mevcut Konaklayanlar'
+   
+  
+
 }
