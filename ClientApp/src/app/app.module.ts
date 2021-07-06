@@ -22,8 +22,6 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { MevcutKonaklayanlarComponent } from './mevcut-konaklayanlar/mevcut-konaklayanlar.component';
-//import { YeniRezervasyonComponent } from './yeni-rezervasyon/yeni-rezervasyon.component';
 
 @NgModule({
   imports: [
@@ -41,9 +39,7 @@ import { MevcutKonaklayanlarComponent } from './mevcut-konaklayanlar/mevcut-kona
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    MevcutKonaklayanlarComponent,
-    //YeniRezervasyonComponent,
-
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -18,6 +18,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { YeniRezervasyonComponent } from 'app/yeni-rezervasyon/yeni-rezervasyon.component';
+import { MevcutKonaklayanlarComponent } from 'app/mevcut-konaklayanlar/mevcut-konaklayanlar.component';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { YeniRezervasyonComponent } from 'app/yeni-rezervasyon/yeni-rezervasyon.
     NotificationsComponent,
     UpgradeComponent,
     YeniRezervasyonComponent,
+    MevcutKonaklayanlarComponent,
   ]
 })
 
