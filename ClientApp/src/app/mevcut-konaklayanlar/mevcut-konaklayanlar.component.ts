@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Model } from 'app/Model';
 
 @Component({
   selector: 'mevcut-konaklayanlar',
@@ -13,6 +14,19 @@ export class MevcutKonaklayanlarComponent implements OnInit {
   }
 
   title = 'Mevcut Konaklayanlar'
+  model = new Model();
+
+  getCategoryName(){
+    return this.model.categoryName;
+  }
+
+  getGuests(){
+    return this.model.guests;
+  }
+
+
+
+
    
   
 

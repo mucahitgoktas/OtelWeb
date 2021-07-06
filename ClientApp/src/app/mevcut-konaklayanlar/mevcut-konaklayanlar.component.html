@@ -4,7 +4,7 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title">{{title}}</h4>
+                        <h4 class="card-title">{{getCategoryName()}}</h4>
                         <p class="card-category">Konaklayan Misafirlerimizin Listesi</p>
                     </div>
                     <div class="card-content table-responsive table-full-width">
@@ -17,7 +17,7 @@
                             </thead>
 
                             <tbody>
-                                <tr *ngFor="let g of Guests">
+                                <tr *ngFor="let g of getGuests()">
                                     <td [class.text-success]="g.durumu==true" [class.text-danger]="g.durumu==false">
                                         Konaklama
                                     </td>

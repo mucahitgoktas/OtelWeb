@@ -5,12 +5,12 @@ export class Model {
     constructor() {
         this.categoryName = 'Mevcut Konaklayanlar'
         this.guests = [
-            { durumu: true, odano: 102, adi: "Fikri", soyadi: "Şahin", ucret: 90 },
-            { durumu: false, odano: 107, adi: "Berkan", soyadi: "Yıldırım", ucret: 140 },
-            { durumu: true, odano: 111, adi: "Ender", soyadi: "Küçük", ucret: 80 },
-            { durumu: false, odano: 119, adi: "Mecit", soyadi: "Peren", ucret: 160 },
-            { durumu: true, odano: 121, adi: "Hasan", soyadi: "Aykan", ucret: 90 }
-        ];
+            new Guest(true,102,"Fikri","Şahin",90),
+            new Guest(true,105,"Berkan","Yıldırım",110),
+            new Guest(false,121,"Ender","Küçük",90),
+            new Guest(true,118,"Mehmet","Aslan",140),
+            new Guest(false,107,"Şevki","Zeyrek",80)
+            ];
     }
 }
 
