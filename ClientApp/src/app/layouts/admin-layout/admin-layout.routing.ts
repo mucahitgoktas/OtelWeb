@@ -63,5 +63,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'yeni-rezervasyon', component: YeniRezervasyonComponent},
-    { path: 'mevcut-konaklayanlar', component:MevcutKonaklayanlarComponent},
+    { path: 'mevcut-konaklayanlar',        component: MevcutKonaklayanlarComponent },
+
 ];
