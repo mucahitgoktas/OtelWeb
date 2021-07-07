@@ -10,6 +10,7 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { YeniRezervasyonComponent } from 'app/yeni-rezervasyon/yeni-rezervasyon.component';
 import { MevcutKonaklayanlarComponent } from 'app/mevcut-konaklayanlar/mevcut-konaklayanlar.component';
+import { GuestDetailsComponent } from 'app/guest-details/guest-details.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -64,5 +65,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'upgrade',        component: UpgradeComponent },
     { path: 'yeni-rezervasyon', component: YeniRezervasyonComponent},
     { path: 'mevcut-konaklayanlar',        component: MevcutKonaklayanlarComponent },
-
+    {path: 'guest-details', component: GuestDetailsComponent},
 ];

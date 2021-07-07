@@ -4,27 +4,29 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title">{{getCategoryName()}}</h4>
+                        <h4 class="card-title">{{title}}</h4>
                         <p class="card-category">Konaklayan Misafirlerimizin Listesi</p>
                     </div>
                     <div class="card-content table-responsive table-full-width">
                         <table class="table">
                             <thead class="text-danger">
-                                <th>Durumu</th>
-                                <th>Oda No</th>
+                                <th>No</th>
+                                <th>Oda</th>
                                 <th>Misafirin Adı Soyadı</th>
+                                <th>Tc Kimlik No</th>
+                                <th>Hes Kodu</th>
                                 <th>Gecelik Ücret</th>
                             </thead>
-
+                            
                             <tbody>
-                                <tr *ngFor="let g of getGuests()">
-                                    <td [class.text-success]="g.durumu==true" [class.text-danger]="g.durumu==false">
-                                        Konaklama
-                                    </td>
+                                <tr *ngFor="let g of guests">
+                                    <td>{{g.sirano}}</td>
                                     <td>{{g.odano}}</td>
                                     <td>{{g.adi}} {{g.soyadi}}</td>
+                                    <td>{{g.tckimlikno}}</td>
+                                    <td>{{g.heskodu}}</td>
                                     <td class="text-danger">{{g.ucret}}₺</td>
-                                    <td><button mat-raised-button class="btn btn-info">Düzenle</button>
+                                    <td><button mat-raised-button class="btn btn-info" (click)="onSelectGuest(g)">Düzenle</button>
                                         <button mat-raised-button class="btn btn-danger">Sil</button>
                                     </td>
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Model } from 'app/Model';
+import { GuestService } from 'app/guest.service';
+import { Guest } from 'app/model';
+
 
 @Component({
   selector: 'mevcut-konaklayanlar',
@@ -7,22 +9,17 @@ import { Model } from 'app/Model';
   styleUrls: ['./mevcut-konaklayanlar.component.css']
 })
 export class MevcutKonaklayanlarComponent implements OnInit {
-
-  constructor() { }
+  guests: Guest[];
+  constructor(private guestService: GuestService) { }
 
   ngOnInit(): void {
+    this.guests = this.guestService.getGuests();
   }
 
   title = 'Mevcut Konaklayanlar'
-  model = new Model();
+  
 
-  getCategoryName(){
-    return this.model.categoryName;
-  }
-
-  getGuests(){
-    return this.model.guests;
-  }
+   
 
 
 

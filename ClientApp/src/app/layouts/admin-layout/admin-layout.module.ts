@@ -19,6 +19,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { YeniRezervasyonComponent } from 'app/yeni-rezervasyon/yeni-rezervasyon.component';
 import { MevcutKonaklayanlarComponent } from 'app/mevcut-konaklayanlar/mevcut-konaklayanlar.component';
+import { GuestDetailsComponent } from 'app/guest-details/guest-details.component';
 
 @NgModule({
   imports: [
@@ -44,6 +45,7 @@ import { MevcutKonaklayanlarComponent } from 'app/mevcut-konaklayanlar/mevcut-ko
     UpgradeComponent,
     YeniRezervasyonComponent,
     MevcutKonaklayanlarComponent,
+    GuestDetailsComponent,
   ]
 })
 

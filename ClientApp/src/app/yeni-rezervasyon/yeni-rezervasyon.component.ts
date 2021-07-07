@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GuestService } from 'app/guest.service';
+import { Guest } from 'app/model';
 
 @Component({
   selector: 'yeni-rezervasyon',
@@ -7,21 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YeniRezervasyonComponent implements OnInit {
 
-  constructor() { }
+  constructor(private guestService:GuestService) { }
 
   ngOnInit(): void {
   }
 
-  addGuest(adi: string,soyadi: string, tckimlikno: number, heskodu:string, ciltno:number, dogumyeri:string, notlar:string)
+  addGuest(sirano,odano,adi,soyadi,ucret,tckimlikno,heskodu,notlar)
   {
     console.log(adi);
     console.log(soyadi);
     console.log(tckimlikno);
     console.log(heskodu);
-    console.log(ciltno);
-    console.log(dogumyeri);
+    console.log(odano);
+    console.log(ucret);
     console.log(notlar);
 
+    const g = new Guest(this.guestService.getGuests().length+1,sirano,odano,adi,soyadi,tckimlikno,heskodu,ucret);
+    this.guestService.addGuest(g);
 
   }
 
