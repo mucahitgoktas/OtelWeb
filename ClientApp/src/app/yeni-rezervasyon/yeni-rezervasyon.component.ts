@@ -12,12 +12,19 @@ export class YeniRezervasyonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addGuest(adi: string,soyadi: string, tckimlikno: number)
+  addGuest(adi: string,soyadi: string, tckimlikno: number, heskodu:string)
   {
     console.log(adi);
     console.log(soyadi);
     console.log(tckimlikno);
+    console.log(heskodu);
+    console.log(soyadi);
+    console.log(tckimlikno);
+
 
   }
+
+  title="Misafir Kayıt";
+  aboutT="Yeni Misafir Kaydı";
 
 }
