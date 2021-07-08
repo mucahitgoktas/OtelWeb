@@ -7,6 +7,7 @@
                         <h4 class="card-title">{{title}}</h4>
                         <p class="card-category">Konaklayan Misafirlerimizin Listesi</p>
                     </div>
+                    
                     <div class="card-content table-responsive table-full-width">
                         <table class="table">
                             <thead class="text-danger">
@@ -20,7 +21,7 @@
                             
                             <tbody>
                                 <tr *ngFor="let g of guests">
-                                    <td>{{g.sirano}}</td>
+                                    <td>{{g.id}}</td>
                                     <td>{{g.odano}}</td>
                                     <td>{{g.adi}} {{g.soyadi}}</td>
                                     <td>{{g.tckimlikno}}</td>
@@ -33,6 +34,8 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <guest-details [guest]="selectedGuest"></guest-details>
+
                     </div>
                 </div>
             </div>

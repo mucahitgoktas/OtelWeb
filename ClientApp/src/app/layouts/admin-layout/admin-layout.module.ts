@@ -20,6 +20,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { YeniRezervasyonComponent } from 'app/yeni-rezervasyon/yeni-rezervasyon.component';
 import { MevcutKonaklayanlarComponent } from 'app/mevcut-konaklayanlar/mevcut-konaklayanlar.component';
 import { GuestDetailsComponent } from 'app/guest-details/guest-details.component';
+import { GuestEditComponent } from 'app/guest-edit/guest-edit.component';
 
 @NgModule({
   imports: [
@@ -46,6 +47,7 @@ import { GuestDetailsComponent } from 'app/guest-details/guest-details.component
     YeniRezervasyonComponent,
     MevcutKonaklayanlarComponent,
     GuestDetailsComponent,
+    GuestEditComponent,
   ]
 })
 

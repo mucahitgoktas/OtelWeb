@@ -14,7 +14,7 @@ export class YeniRezervasyonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addGuest(sirano,odano,adi,soyadi,ucret,tckimlikno,heskodu,notlar)
+  addGuest(id: number,odano: string,adi: string,soyadi: string,ucret: string,tckimlikno: string,heskodu: string,notlar: string)
   {
     console.log(adi);
     console.log(soyadi);
@@ -24,8 +24,8 @@ export class YeniRezervasyonComponent implements OnInit {
     console.log(ucret);
     console.log(notlar);
 
-    const g = new Guest(this.guestService.getGuests().length+1,sirano,odano,adi,soyadi,tckimlikno,heskodu,ucret);
-    this.guestService.addGuest(g);
+    const g = new Guest(this.guestService.getGuests().length+1,id,odano,adi,soyadi,tckimlikno,heskodu,ucret);
+    this.guestService.saveGuest(g);
 
   }
 

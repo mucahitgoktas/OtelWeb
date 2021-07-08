@@ -13,7 +13,7 @@ export class Model {
 }
 
 export class Guest {
-    sirano: number;
+    id: number;
     //durumu: boolean;
     odano: number;
     adi: string;
@@ -24,8 +24,8 @@ export class Guest {
     notlar:string;
 
 
-    constructor(sirano:number, odano: number, adi: string, soyadi: string, ucret: string, tckimlikno: string, heskodu: string, notlar: string) {
-        this.sirano = sirano;
+    constructor(id:number, odano: number, adi: string, soyadi: string, ucret: string, tckimlikno: string, heskodu: string, notlar: string) {
+        this.id = id;
         //this.durumu = durumu;
         this.odano = odano;
         this.adi = adi;

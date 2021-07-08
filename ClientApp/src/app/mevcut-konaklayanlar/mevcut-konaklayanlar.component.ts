@@ -10,6 +10,8 @@ import { Guest } from 'app/model';
 })
 export class MevcutKonaklayanlarComponent implements OnInit {
   guests: Guest[];
+  selectedGuest: Guest;
+
   constructor(private guestService: GuestService) { }
 
   ngOnInit(): void {
@@ -17,6 +19,10 @@ export class MevcutKonaklayanlarComponent implements OnInit {
   }
 
   title = 'Mevcut Konaklayanlar'
+
+  onSelectGuest(guest : Guest){
+    this.selectedGuest = guest;
+  }
   
 
    
