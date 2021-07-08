@@ -5,11 +5,14 @@ namespace DTO
     public class GuestDTO
     {
         [Key]
-        public int GuestId { get; set; }
-        public string Adi { get; set; }
-        public string Soyadi { get; set; }
-        public string TcKimlikNo { get; set; } 
-        public string HesKodu { get; set; }
-        
+        public int id { get; set; }
+        public int odano { get; set; }
+        public string adi { get; set; }
+        public string soyadi { get; set; }
+        public string tckimlikno { get; set; }
+        public string heskodu { get; set; }
+        public int ucret { get; set; }
+        public string notlar { get; set; }
+
     }
 }

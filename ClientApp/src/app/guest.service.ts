@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Guest, Model } from './model';
 
 @Injectable({
@@ -6,11 +8,13 @@ import { Guest, Model } from './model';
 })
 export class GuestService {
 
+  
+  baseUrl: string = "http://localhost:5000/"
   model = new Model();
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getGuests(){
-    return this.model.guests;
+  getGuests(): Observable<Guest[]> {
+    return this.http.get<Guest[]>(this.baseUrl + 'api/guests');
   }
 
   getGuestById(id: number){

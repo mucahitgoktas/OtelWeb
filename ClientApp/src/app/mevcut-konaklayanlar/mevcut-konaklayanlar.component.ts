@@ -11,15 +11,20 @@ import { Guest } from 'app/model';
 export class MevcutKonaklayanlarComponent implements OnInit {
 
   selectedGuest: Guest;
+  guests: Guest[];
 
   constructor(private guestService: GuestService) { }
 
   ngOnInit(): void {
+    this.getGuests();
   }
 
 
-  getGuests(): Guest[] {
-    return this.guestService.getGuests();
+  getGuests() {
+    this.guestService.getGuests().subscribe(guests => {
+      this.guests = guests
+
+    });
   }
 
   title = 'Mevcut Konaklayanlar'
@@ -30,7 +35,7 @@ export class MevcutKonaklayanlarComponent implements OnInit {
 
   deleteGuest(guest: Guest) {
     this.guestService.deleteGuest(guest);
-    
+
   }
 
 
