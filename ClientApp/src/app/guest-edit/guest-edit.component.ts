@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { GuestService } from 'app/guest.service';
+import { Guest } from 'app/model';
 
 @Component({
   selector: 'guest-edit',
@@ -6,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./guest-edit.component.css']
 })
 export class GuestEditComponent implements OnInit {
+  @Input() guest : Guest
 
-  constructor() { }
+  constructor(private guestService:GuestService) { }
 
   ngOnInit(): void {
   }

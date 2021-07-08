@@ -19,6 +19,7 @@ export class GuestService {
 
   saveGuest(guest: Guest){
     if (guest.id == 0) {
+      guest.id = this.getGuests.length+1;
       this.model.guests.push(guest);
     }
     else {
@@ -32,7 +33,11 @@ export class GuestService {
       g.ucret = guest.ucret;
       g.notlar = guest.notlar;
     }
-    
 
+  }
+
+  deleteGuest(guest: Guest)
+  {
+    this.model.guests = this.model.guests.filter(g=>g!==guest);
   }
 }

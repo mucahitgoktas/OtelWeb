@@ -20,16 +20,16 @@
                             </thead>
                             
                             <tbody>
-                                <tr *ngFor="let g of guests">
+                                <tr *ngFor="let g of getGuests()">
                                     <td>{{g.id}}</td>
                                     <td>{{g.odano}}</td>
                                     <td>{{g.adi}} {{g.soyadi}}</td>
                                     <td>{{g.tckimlikno}}</td>
                                     <td>{{g.heskodu}}</td>
                                     <td class="text-danger">{{g.ucret}}₺</td>
-                                    <td><button mat-raised-button class="btn btn-info" (click)="onSelectGuest(g)">Düzenle</button>
-                                        <button mat-raised-button class="btn btn-danger">Sil</button>
-                                    </td>
+                                    <td><button mat-raised-button class="btn btn-info" (click)="onSelectGuest(g)">Düzenle</button></td>
+                                    <td><button mat-raised-button class="btn btn-danger"(click)="deleteGuest(g)">Sil</button></td>
+                                    
 
                                 </tr>
                             </tbody>

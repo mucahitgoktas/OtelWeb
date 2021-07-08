@@ -9,28 +9,37 @@ import { Guest } from 'app/model';
   styleUrls: ['./mevcut-konaklayanlar.component.css']
 })
 export class MevcutKonaklayanlarComponent implements OnInit {
-  guests: Guest[];
+
   selectedGuest: Guest;
 
   constructor(private guestService: GuestService) { }
 
   ngOnInit(): void {
-    this.guests = this.guestService.getGuests();
+  }
+
+
+  getGuests(): Guest[] {
+    return this.guestService.getGuests();
   }
 
   title = 'Mevcut Konaklayanlar'
 
-  onSelectGuest(guest : Guest){
+  onSelectGuest(guest: Guest) {
     this.selectedGuest = guest;
   }
-  
 
-   
+  deleteGuest(guest: Guest) {
+    this.guestService.deleteGuest(guest);
+    
+  }
 
 
 
 
-   
-  
+
+
+
+
+
 
 }
