@@ -9,34 +9,34 @@ using ServerApp.Models;
 
 namespace ServerApp.Controllers
 {
-    // localhost:5000/api/guests
+    // localhost:5000/api/Guests1
     [ApiController]
     [Route("api/[controller]")]
-    public class GuestsController:ControllerBase
+    public class Guests1Controller:ControllerBase
     {
         private OtelContext _context;
-        public GuestsController(OtelContext context)
+        public Guests1Controller(OtelContext context)
         {
            _context = context;
         }
 
-        // localhost:5000/api/guests
+        // localhost:5000/api/Guests1
         [HttpGet]
-        public async Task<ActionResult> GetGuests()
+        public async Task<ActionResult> GetGuests1()
         {
-            var guests = await _context
-            .Guests
+            var Guests1 = await _context
+            .Guests1
             .Select(p=> GuestToDTO(p))
             .ToListAsync();
-            return Ok(guests);      
+            return Ok(Guests1);      
         }
 
 
-        // localhost:5000/api/guests/2
+        // localhost:5000/api/Guests1/2
         [HttpGet("{id}")]
         public async Task<IActionResult> GetGuest(int id)
         {
-            var p = await _context.Guests.FindAsync(id);
+            var p = await _context.Guests1.FindAsync(id);
             if (p==null)
             {
                 return NotFound();
@@ -48,30 +48,33 @@ namespace ServerApp.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateGuest(Guest guest1)
         {
-            _context.Guests.Add(guest1);
+            _context.Guests1.Add(guest1);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetGuest), new {id=guest1.GuestId},GuestToDTO(guest1));
+            return CreatedAtAction(nameof(GetGuest), new {id=guest1.id},GuestToDTO(guest1));
         }
         // localhost/api/guest/3  
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateGuest(int id,Guest guest2)
         {
-            if (id!=guest2.GuestId)
+            if (id!=guest2.id)
             {
                 return BadRequest();
             }
 
-            var guest = await _context.Guests.FindAsync(id);
+            var guest = await _context.Guests1.FindAsync(id);
             if (guest==null)
             {
                 return NotFound();
             }
 
-            guest.Adi = guest2.Adi;
-            guest.Soyadi = guest2.Soyadi;
-            guest.HesKodu = guest2.HesKodu;
-            guest.TcKimlikNo = guest2.TcKimlikNo;
+            guest.odano = guest2.odano;
+            guest.adi = guest2.adi;
+            guest.soyadi = guest2.soyadi;
+            guest.heskodu = guest2.heskodu;
+            guest.tckimlikno = guest2.tckimlikno;
+            guest.ucret = guest2.ucret;
+            guest.notlar = guest2.notlar;
 
             try
             {
@@ -91,13 +94,13 @@ namespace ServerApp.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteGuest(int id)
         {
-            var guest = await _context.Guests.FindAsync(id);
+            var guest = await _context.Guests1.FindAsync(id);
             if (guest==null)        
             {
                 return NotFound();
             }
 
-            _context.Guests.Remove(guest);
+            _context.Guests1.Remove(guest);
             await _context.SaveChangesAsync();
 
             return NoContent();
@@ -107,11 +110,15 @@ namespace ServerApp.Controllers
         {
           return new GuestDTO()
           {
-                GuestId = p.GuestId,
-                Adi = p.Adi,
-                Soyadi = p.Soyadi,
-                HesKodu = p.HesKodu,
-                TcKimlikNo = p.TcKimlikNo   
+                id = p.id,
+                adi = p.adi,
+                soyadi = p.soyadi,
+                heskodu = p.heskodu,
+                tckimlikno = p.tckimlikno,
+                odano = p.odano,
+                ucret = p.ucret,
+                notlar = p.notlar
+
           };  
         }
     }
