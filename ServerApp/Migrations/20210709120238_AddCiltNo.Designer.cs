@@ -35,6 +35,9 @@ namespace ServerApp.Migrations
                     b.Property<string>("HesKodu")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Notlar")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("OdaNo")
                         .HasColumnType("INTEGER");
 

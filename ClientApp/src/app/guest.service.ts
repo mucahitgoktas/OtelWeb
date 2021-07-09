@@ -40,7 +40,8 @@ export class GuestService {
       g.hesKodu = guest.hesKodu;
       g.odaNo = guest.odaNo;
       g.ucret = guest.ucret;
-      g.notlar = guest.notlar;
+      g.CiltNo = guest.CiltNo;
+      g.DogumYeri = guest.DogumYeri;
     }
 
   }

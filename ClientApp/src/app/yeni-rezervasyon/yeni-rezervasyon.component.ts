@@ -9,23 +9,23 @@ import { Guest } from 'app/model';
 })
 export class YeniRezervasyonComponent implements OnInit {
   @Input() guests: Guest[];
-  constructor(private guestService:GuestService) { }
+  constructor(private guestService: GuestService) { }
 
   ngOnInit(): void {
   }
 
-  addGuest(id: number,odano: number,adi: string,soyadi: string,ucret: string,tckimlikno: string,heskodu: string,notlar: string)
-  {
-    
-    const g = new Guest(0,odano,adi,soyadi,tckimlikno,heskodu,ucret,notlar);
+  addGuest(id: number, adi: string, heskodu: string, tckimlikno: string, CiltNo: string, OdaNo: number, soyadi: string, ucret: string, DogumYeri: string) {
+
+    //let g = new Guest(0,odaNo,adi,soyadi,tckimlikno,heskodu,ucret,notlar);
+    let g = new Guest(0, 107, "Dursun", "İspahi", "90", "30224545145", "a1b7121514", "ciltno", "dogumyeri");
     this.guestService.addGuest(g)
-    .subscribe(guest => {
-      this.guests.push(guest);
-    });
+      .subscribe(guest => {
+        this.guests.push(guest);
+      });
 
   }
 
-  title="Misafir Kayıt";
-  aboutT="Yeni Misafir Kaydı";
+  title = "Misafir Kayıt";
+  aboutT = "Yeni Misafir Kaydı";
 
 }

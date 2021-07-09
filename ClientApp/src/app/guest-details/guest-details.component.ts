@@ -16,10 +16,10 @@ export class GuestDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addGuest(id: number,odano: number,adi: string,soyadi: string,ucret: string,tckimlikno: string,heskodu: string,notlar: string)
+  addGuest(id: number,odano: number,adi: string,soyadi: string,ucret: string,tckimlikno: string,heskodu: string,notlar: string,DogumYeri: string)
   {
     
-    const g = new Guest(id,odano,adi,soyadi,tckimlikno,heskodu,ucret,notlar);
+    const g = new Guest(id,odano,adi,soyadi,tckimlikno,heskodu,ucret,notlar,DogumYeri);
     this.guestService.saveGuest(g);
     this.guest = null;
 

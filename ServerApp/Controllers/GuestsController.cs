@@ -53,6 +53,8 @@ namespace ServerApp.Controllers
 
             return CreatedAtAction(nameof(GetGuest), new {id=guest1.GuestId},GuestToDTO(guest1));
         }
+        
+        
         // localhost/api/guest/3  
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateGuest(int id,Guest guest2)
@@ -103,15 +105,21 @@ namespace ServerApp.Controllers
             return NoContent();
         }
 
-        private static GuestDTO GuestToDTO(Guest p)
+        private static GuestDTO GuestToDTO(Guest g)
         {
           return new GuestDTO()
           {
-                GuestId = p.GuestId,
-                Adi = p.Adi,
-                Soyadi = p.Soyadi,
-                HesKodu = p.HesKodu,
-                TcKimlikNo = p.TcKimlikNo   
+                GuestId = g.GuestId,
+                Adi = g.Adi,
+                Soyadi = g.Soyadi,
+                TcKimlikNo = g.TcKimlikNo,
+                HesKodu = g.HesKodu,
+                DogumYeri = g.DogumYeri,
+                OdaNo = g.OdaNo,
+                Ucret = g.Ucret,
+                CiltNo = g.CiltNo
+                
+
           };  
         }
     }

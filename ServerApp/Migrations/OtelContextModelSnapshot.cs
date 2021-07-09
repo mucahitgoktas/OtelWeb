@@ -34,7 +34,7 @@ namespace ServerApp.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Notlar")
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT");    
 
                     b.Property<int>("OdaNo")
                         .HasColumnType("INTEGER");
