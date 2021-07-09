@@ -17,7 +17,7 @@ export class YeniRezervasyonComponent implements OnInit {
   addGuest(id: number, adi: string, heskodu: string, tckimlikno: string, CiltNo: string, OdaNo: number, soyadi: string, ucret: string, DogumYeri: string) {
 
     //let g = new Guest(0,odaNo,adi,soyadi,tckimlikno,heskodu,ucret,notlar);
-    let g = new Guest(0, 107, "Dursun", "İspahi", "90", "30224545145", "a1b7121514", "ciltno", "dogumyeri");
+    let g = new Guest(0, 107, adi, soyadi, "9", tckimlikno, heskodu, CiltNo, DogumYeri);
     this.guestService.addGuest(g)
       .subscribe(guest => {
         this.guests.push(guest);
