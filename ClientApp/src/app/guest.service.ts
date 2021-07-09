@@ -18,22 +18,22 @@ export class GuestService {
   }
 
   getGuestById(id: number){
-    return this.model.guests.find(i=>i.id==id);
+    return this.model.guests.find(i=>i.guestId==id);
   }
 
   saveGuest(guest: Guest){
-    if (guest.id == 0) {
-      guest.id = this.getGuests.length+1;
+    if (guest.guestId == 0) {
+      guest.guestId = this.getGuests.length+1;
       this.model.guests.push(guest);
     }
     else {
-      const g = this.getGuestById(guest.id);
+      const g = this.getGuestById(guest.guestId);
       g.adi = guest.adi;
       g.soyadi = guest.soyadi;
-      g.id = guest.id;
-      g.tckimlikno = guest.tckimlikno;
-      g.heskodu = guest.heskodu;
-      g.odano = guest.odano;
+      g.guestId = guest.guestId;
+      g.tcKimlikNo = guest.tcKimlikNo;
+      g.hesKodu = guest.hesKodu;
+      g.odaNo = guest.odaNo;
       g.ucret = guest.ucret;
       g.notlar = guest.notlar;
     }

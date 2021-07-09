@@ -9,6 +9,6 @@ namespace ServerApp.Data
         {
             
         }
-        public DbSet<Guest> Guests1 { get; set; }
+        public DbSet<Guest> Guests { get; set; }
     }
 }
