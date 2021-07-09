@@ -30,7 +30,7 @@ namespace ServerApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<OtelContext>(x => x.UseSqlite("Data Source=otel.db"));
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
             services.AddCors(options =>
             {
                 options.AddPolicy(

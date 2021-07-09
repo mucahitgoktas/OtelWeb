@@ -14,6 +14,7 @@ namespace DTO
         public int OdaNo { get; set; }
         public int Ucret { get; set; }
         public int CiltNo { get; set; }
+        public string Notlar { get; set; }
                
     }
 }

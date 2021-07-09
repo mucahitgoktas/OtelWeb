@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GuestService } from 'app/guest.service';
 import { Guest } from 'app/model';
 
@@ -8,7 +8,7 @@ import { Guest } from 'app/model';
   styleUrls: ['./yeni-rezervasyon.component.css']
 })
 export class YeniRezervasyonComponent implements OnInit {
-
+  @Input() guests: Guest[];
   constructor(private guestService:GuestService) { }
 
   ngOnInit(): void {
@@ -18,7 +18,10 @@ export class YeniRezervasyonComponent implements OnInit {
   {
     
     const g = new Guest(0,odano,adi,soyadi,tckimlikno,heskodu,ucret,notlar);
-    this.guestService.saveGuest(g);
+    this.guestService.addGuest(g)
+    .subscribe(guest => {
+      this.guests.push(guest);
+    });
 
   }
 

@@ -17,6 +17,11 @@ export class GuestService {
     return this.http.get<Guest[]>(this.baseUrl + 'api/guests');
   }
 
+  addGuest(guest: Guest): Observable<Guest>
+  {
+    return this.http.post<Guest>(this.baseUrl + 'api/guests', guest);
+  }
+
   getGuestById(id: number){
     return this.model.guests.find(i=>i.guestId==id);
   }
