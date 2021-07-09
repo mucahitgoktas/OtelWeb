@@ -22,7 +22,6 @@ import {
   AgmCoreModule
 } from '@agm/core';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { MevcutKonaklayanlarComponent } from './mevcut-konaklayanlar/mevcut-konaklayanlar.component';
 
 @NgModule({
   imports: [
@@ -40,8 +39,8 @@ import { MevcutKonaklayanlarComponent } from './mevcut-konaklayanlar/mevcut-kona
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    MevcutKonaklayanlarComponent,
-
+    
+        
   ],
   providers: [],
   bootstrap: [AppComponent]

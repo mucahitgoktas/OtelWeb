@@ -17,6 +17,10 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
+import { YeniRezervasyonComponent } from 'app/yeni-rezervasyon/yeni-rezervasyon.component';
+import { MevcutKonaklayanlarComponent } from 'app/mevcut-konaklayanlar/mevcut-konaklayanlar.component';
+import { GuestDetailsComponent } from 'app/guest-details/guest-details.component';
+import { GuestEditComponent } from 'app/guest-edit/guest-edit.component';
 
 @NgModule({
   imports: [
@@ -40,6 +44,10 @@ import {MatSelectModule} from '@angular/material/select';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
+    YeniRezervasyonComponent,
+    MevcutKonaklayanlarComponent,
+    GuestDetailsComponent,
+    GuestEditComponent,
   ]
 })
 

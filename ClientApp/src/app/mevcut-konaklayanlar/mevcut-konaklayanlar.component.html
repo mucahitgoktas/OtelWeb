@@ -1,31 +1,44 @@
 <div class="main-content">
-    <div class="card">
-        <div class="card-header card-header-danger">
-            <h4 class="card-title">Mevcut Konaklayanlar</h4>
-            <p class="card-category">Konaklayan Misafirlerimizin Listesi</p>
-        </div>
-        <div class="card-content table-responsive table-full-width">
-            <table class="table">
-                <thead class="text-danger">
-                    <th>Durumu</th>
-                    <th>Oda No</th>
-                    <th>Misafirin Adı Soyadı</th>
-                    <th>Gecelik Ücret</th>
-                    <th></th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Konaklayan</td>
-                        <td>121</td>
-                        <td>Fikri Şahin</td>
-                        <td class="text-danger">90₺</td>
-                        <td><button mat-raised-button class="btn btn-info">Düzenle</button>
-                            <button mat-raised-button class="btn btn-danger">Sil</button>
-                        </td>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">{{title}}</h4>
+                        <p class="card-category">Konaklayan Misafirlerimizin Listesi</p>
+                    </div>
+                    
+                    <div class="card-content table-responsive table-full-width">
+                        <table class="table">
+                            <thead class="text-danger">
+                                <th>No</th>
+                                <th>Oda</th>
+                                <th>Misafirin Adı Soyadı</th>
+                                <th>Tc Kimlik No</th>
+                                <th>Hes Kodu</th>
+                                <th>Gecelik Ücret</th>
+                            </thead>
+                            
+                            <tbody>
+                                <tr *ngFor="let g of guests">
+                                    <td>{{g.guestId}}</td>
+                                    <td>{{g.odaNo}}</td>
+                                    <td>{{g.adi}} {{g.soyadi}}</td>
+                                    <td>{{g.tcKimlikNo}}</td>
+                                    <td>{{g.hesKodu}}</td>
+                                    <td class="text-danger">{{g.ucret}}₺</td>
+                                    <td><button mat-raised-button class="btn btn-info" (click)="onSelectGuest(g)">Düzenle</button></td>
+                                    <td><button mat-raised-button class="btn btn-danger"(click)="deleteGuest(g)">Sil</button></td>
+                                    
 
-                    </tr>
-                </tbody>
-            </table>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <guest-details [guest]="selectedGuest"></guest-details> -->
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
