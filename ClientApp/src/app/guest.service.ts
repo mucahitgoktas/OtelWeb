@@ -8,7 +8,7 @@ import { Guest, Model } from './model';
 })
 export class GuestService {
 
-  
+
   baseUrl: string = "http://localhost:5000/"
   model = new Model();
   constructor(private http: HttpClient) { }
@@ -17,37 +17,37 @@ export class GuestService {
     return this.http.get<Guest[]>(this.baseUrl + 'api/guests');
   }
 
-  addGuest(guest: Guest): Observable<Guest>
-  {
+  addGuest(guest: Guest): Observable<Guest> {
     return this.http.post<Guest>(this.baseUrl + 'api/guests', guest);
   }
 
-  getGuestById(id: number){
-    return this.model.guests.find(i=>i.GuestId==id);
+  getGuestById(id: number) {
+    return this.model.guests.find(i => i.GuestId == id);
   }
 
-  saveGuest(guest: Guest){
+  saveGuest(guest: Guest) {
     if (guest.GuestId == 0) {
-      guest.GuestId = this.getGuests.length+1;
+      guest.GuestId = this.getGuests.length + 1;
       this.model.guests.push(guest);
     }
     else {
       const g = this.getGuestById(guest.GuestId);
+      g.GuestId = guest.GuestId;
       g.Adi = guest.Adi;
       g.Soyadi = guest.Soyadi;
-      g.GuestId = guest.GuestId;
       g.TcKimlikNo = guest.TcKimlikNo;
       g.HesKodu = guest.HesKodu;
+      g.DogumYeri = guest.DogumYeri;
       g.OdaNo = guest.OdaNo;
       g.Ucret = guest.Ucret;
       g.CiltNo = guest.CiltNo;
-      g.DogumYeri = guest.DogumYeri;
+      g.Notlar = guest.Notlar;
+      
     }
 
   }
 
-  deleteGuest(guest: Guest)
-  {
-    this.model.guests = this.model.guests.filter(g=>g!==guest);
+  deleteGuest(guest: Guest) {
+    this.model.guests = this.model.guests.filter(g => g !== guest);
   }
 }
