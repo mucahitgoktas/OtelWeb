@@ -19,11 +19,24 @@ export class GuestDetailsComponent implements OnInit {
   addGuest(id: number,odano: number,adi: string,soyadi: string,ucret: string,tckimlikno: string,heskodu: string,notlar: string,DogumYeri: string)
   {
     
-    const g = new Guest(id,odano,adi,soyadi,tckimlikno,heskodu,ucret,notlar,DogumYeri);
-    this.guestService.saveGuest(g);
-    this.guest = null;
+    //let g = new Guest(id,odano,adi,soyadi,tckimlikno,heskodu,ucret,notlar,DogumYeri);
+    //this.guestService.saveGuest(g);
+    //this.guest = null;
 
   }
+
+  /*
+  this.GuestId = id;
+        this.Ucret = ucret;
+        this.OdaNo = odano;
+        this.Adi = adi;
+        this.Soyadi = soyadi;
+        this.TcKimlikNo = tckimlikno;
+        this.HesKodu = hesKodu;
+        this.CiltNo = ciltno;
+        this.DogumYeri = dogumyeri;
+        this.Notlar = notlar;
+  */
 
   
 

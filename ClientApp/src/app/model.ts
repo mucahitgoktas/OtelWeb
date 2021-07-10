@@ -14,37 +14,37 @@ export class Model {
 
 export class Guest {
     GuestId: number;
-    Ucret: string;
-    OdaNo: number;
     Adi: string;
     Soyadi: string;
     TcKimlikNo: string;
     HesKodu: string;
-    CiltNo: string;
     DogumYeri: string;
+    OdaNo: number;
+    Ucret: string;
+    CiltNo: string;
     Notlar: string;
 
 
     constructor(
         id: number,
-        ucret: string,
-        odano: number,
         adi: string,
         soyadi: string,
         tckimlikno: string,
         hesKodu: string,
-        ciltno: string,
         dogumyeri: string,
+        odano: number,
+        ucret: string,
+        ciltno: string,
         notlar: string) {
         this.GuestId = id;
-        this.Ucret = ucret;
-        this.OdaNo = odano;
         this.Adi = adi;
         this.Soyadi = soyadi;
         this.TcKimlikNo = tckimlikno;
         this.HesKodu = hesKodu;
-        this.CiltNo = ciltno;
         this.DogumYeri = dogumyeri;
+        this.OdaNo = odano;
+        this.Ucret = ucret;
+        this.CiltNo = ciltno;
         this.Notlar = notlar;
 
     }
