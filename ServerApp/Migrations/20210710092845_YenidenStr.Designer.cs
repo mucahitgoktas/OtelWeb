@@ -8,8 +8,8 @@ using ServerApp.Data;
 namespace ServerApp.Migrations
 {
     [DbContext(typeof(OtelContext))]
-    [Migration("20210703141857_TcKimlikString")]
-    partial class TcKimlikString
+    [Migration("20210710092845_YenidenStr")]
+    partial class YenidenStr
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,14 +26,32 @@ namespace ServerApp.Migrations
                     b.Property<string>("Adi")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("CiltNo")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("DogumYeri")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("HesKodu")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Notlar")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("OdaNo")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Secret")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Soyadi")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("TcKimlikNo")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("TcKimlikNo")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Ucret")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("GuestId");
 

@@ -14,10 +14,10 @@ export class YeniRezervasyonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addGuest(id: number, adi: string, heskodu: string, tckimlikno: string, CiltNo: string, OdaNo: number, soyadi: string, ucret: string, DogumYeri: string) {
+  addGuest(id, ucret, OdaNo, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar) {
 
     //let g = new Guest(0,odaNo,adi,soyadi,tckimlikno,heskodu,ucret,notlar);
-    let g = new Guest(0, 107, adi, soyadi, "9", tckimlikno, heskodu, CiltNo, DogumYeri);
+    let g = new Guest(0, ucret, OdaNo, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar);
     this.guestService.addGuest(g)
       .subscribe(guest => {
         this.guests.push(guest);

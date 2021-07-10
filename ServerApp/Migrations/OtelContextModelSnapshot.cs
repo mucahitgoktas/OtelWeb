@@ -24,8 +24,8 @@ namespace ServerApp.Migrations
                     b.Property<string>("Adi")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("CiltNo")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("CiltNo")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("DogumYeri")
                         .HasColumnType("TEXT");
@@ -34,10 +34,10 @@ namespace ServerApp.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Notlar")
-                        .HasColumnType("TEXT");    
+                        .HasColumnType("TEXT");
 
-                    b.Property<int>("OdaNo")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("OdaNo")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Secret")
                         .HasColumnType("TEXT");
@@ -48,8 +48,8 @@ namespace ServerApp.Migrations
                     b.Property<string>("TcKimlikNo")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Ucret")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Ucret")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("GuestId");
 

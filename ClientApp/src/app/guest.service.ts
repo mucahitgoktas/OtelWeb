@@ -23,23 +23,23 @@ export class GuestService {
   }
 
   getGuestById(id: number){
-    return this.model.guests.find(i=>i.guestId==id);
+    return this.model.guests.find(i=>i.GuestId==id);
   }
 
   saveGuest(guest: Guest){
-    if (guest.guestId == 0) {
-      guest.guestId = this.getGuests.length+1;
+    if (guest.GuestId == 0) {
+      guest.GuestId = this.getGuests.length+1;
       this.model.guests.push(guest);
     }
     else {
-      const g = this.getGuestById(guest.guestId);
-      g.adi = guest.adi;
-      g.soyadi = guest.soyadi;
-      g.guestId = guest.guestId;
-      g.tcKimlikNo = guest.tcKimlikNo;
-      g.hesKodu = guest.hesKodu;
-      g.odaNo = guest.odaNo;
-      g.ucret = guest.ucret;
+      const g = this.getGuestById(guest.GuestId);
+      g.Adi = guest.Adi;
+      g.Soyadi = guest.Soyadi;
+      g.GuestId = guest.GuestId;
+      g.TcKimlikNo = guest.TcKimlikNo;
+      g.HesKodu = guest.HesKodu;
+      g.OdaNo = guest.OdaNo;
+      g.Ucret = guest.Ucret;
       g.CiltNo = guest.CiltNo;
       g.DogumYeri = guest.DogumYeri;
     }
