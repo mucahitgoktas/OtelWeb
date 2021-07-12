@@ -111,13 +111,14 @@ namespace ServerApp.Controllers
           {
                 GuestId = g.GuestId,
                 Adi = g.Adi,
-                Soyadi = g.Soyadi,
-                TcKimlikNo = g.TcKimlikNo,
-                HesKodu = g.HesKodu,
-                DogumYeri = g.DogumYeri,
-                OdaNo = g.OdaNo,
-                Ucret = g.Ucret,
-                CiltNo = g.CiltNo
+                // Soyadi = g.Soyadi,
+                // TcKimlikNo = g.TcKimlikNo,
+                // HesKodu = g.HesKodu,
+                // DogumYeri = g.DogumYeri,
+                // OdaNo = g.OdaNo,
+                // Ucret = g.Ucret,
+                // CiltNo = g.CiltNo,
+                // Notlar = g.Notlar
                 
 
           };  

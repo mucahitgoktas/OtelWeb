@@ -15,37 +15,38 @@ export class Model {
 export class Guest {
     GuestId: number;
     Adi: string;
-    Soyadi: string;
-    TcKimlikNo: string;
-    HesKodu: string;
-    DogumYeri: string;
-    OdaNo: number;
-    Ucret: string;
-    CiltNo: string;
-    Notlar: string;
+    //Soyadi: string;
+    // TcKimlikNo: string;
+    // HesKodu: string;
+    // DogumYeri: string;
+    // OdaNo: string;
+    // Ucret: string;
+    // CiltNo: string;
+    // Notlar: string;
 
 
     constructor(
         id: number,
         adi: string,
-        soyadi: string,
-        tckimlikno: string,
-        hesKodu: string,
-        dogumyeri: string,
-        odano: number,
-        ucret: string,
-        ciltno: string,
-        notlar: string) {
+        //soyadi: string,
+        // tckimlikno: string,
+        // hesKodu: string,
+        // dogumyeri: string,
+        // odano: string,
+        // ucret: string,
+        // ciltno: string,
+        // notlar: string
+    ) {
         this.GuestId = id;
         this.Adi = adi;
-        this.Soyadi = soyadi;
-        this.TcKimlikNo = tckimlikno;
-        this.HesKodu = hesKodu;
-        this.DogumYeri = dogumyeri;
-        this.OdaNo = odano;
-        this.Ucret = ucret;
-        this.CiltNo = ciltno;
-        this.Notlar = notlar;
+        //this.Soyadi = soyadi;
+        // this.TcKimlikNo = tckimlikno;
+        // this.HesKodu = hesKodu;
+        // this.DogumYeri = dogumyeri;
+        // this.OdaNo = odano;
+        // this.Ucret = ucret;
+        // this.CiltNo = ciltno;
+        // this.Notlar = notlar;
 
     }
 }
