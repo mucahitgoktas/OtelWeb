@@ -14,23 +14,28 @@ export class YeniRezervasyonComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addGuest(id,adi){
-    let g = new Guest(0,adi);
-  }
 
-
-  // addGuest(id, ucret, odano, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar) {
-
-  //   //let g = new Guest(0,odaNo,adi,soyadi,tckimlikno,heskodu,ucret,notlar);
-  //   let g = new Guest(0, ucret, odano, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar);
-  //   this.guestService.addGuest(g)
-  //     .subscribe(guest => {
+  // addGuest(id,adi){
+  //   const g = new Guest(0,adi);
+  //   this.guestService.addGuest(g).subscribe(guest => 
+  //     {
   //       this.guests.push(guest);
-  //     });
-
+  //     }
+  //     );
   // }
 
-  title = "Misafir Kayıt";
-  aboutT = "Yeni Misafir Kaydı";
 
-}
+  addGuest(id, ucret, odano, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar) {
+
+    //let g = new Guest(0,odaNo,adi,soyadi,tckimlikno,heskodu,ucret,notlar);
+    let g = new Guest(0, ucret, odano, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar);
+    this.guestService.addGuest(g)
+      .subscribe(guest => {
+        this.guests.push(guest);
+      });
+
+     }
+
+
+
+  }

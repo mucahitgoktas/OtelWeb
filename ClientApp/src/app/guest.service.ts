@@ -33,15 +33,15 @@ export class GuestService {
     else {
       const g = this.getGuestById(guest.GuestId);
       g.GuestId = guest.GuestId;
-      g.Adi = guest.Adi;
-      //g.Soyadi = guest.Soyadi;
-      // g.TcKimlikNo = guest.TcKimlikNo;
-      // g.HesKodu = guest.HesKodu;
-      // g.DogumYeri = guest.DogumYeri;
-      // g.OdaNo = guest.OdaNo;
-      // g.Ucret = guest.Ucret;
-      // g.CiltNo = guest.CiltNo;
-      // g.Notlar = guest.Notlar;
+      g.adi = guest.adi;
+      g.Soyadi = guest.Soyadi;
+      g.TcKimlikNo = guest.TcKimlikNo;
+      g.HesKodu = guest.HesKodu;
+      g.DogumYeri = guest.DogumYeri;
+      g.OdaNo = guest.OdaNo;
+      g.Ucret = guest.Ucret;
+      g.CiltNo = guest.CiltNo;
+      g.Notlar = guest.Notlar;
       
     }
 
