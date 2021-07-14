@@ -26,6 +26,10 @@ export class GuestService {
 
   }
 
+  deleteGuest(guest: Guest): Observable<Guest> {
+    return this.http.delete<Guest>(this.baseUrl + 'api/guests/'+guest.GuestId);
+  }
+
   getGuestById(id: number) {
     return this.model.guests.find(i => i.GuestId == id);
   }
@@ -52,7 +56,5 @@ export class GuestService {
 
   }
 
-  deleteGuest(guest: Guest) {
-    this.model.guests = this.model.guests.filter(g => g !== guest);
-  }
+  
 }

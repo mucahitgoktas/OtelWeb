@@ -34,7 +34,9 @@ export class MevcutKonaklayanlarComponent implements OnInit {
   }
 
   deleteGuest(guest: Guest) {
-    this.guestService.deleteGuest(guest);
+    this.guestService.deleteGuest(guest).subscribe(g=> {
+      this.guests.splice(this.guests.findIndex(g=>g.GuestId == guest.GuestId),1)
+    });
 
   }
 

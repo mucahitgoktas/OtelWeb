@@ -7,7 +7,7 @@
                         <h4 class="card-title">{{title}}</h4>
                         <p class="card-category">Konaklayan Misafirlerimizin Listesi</p>
                     </div>
-                    
+
                     <div class="card-content table-responsive table-full-width">
                         <table class="table">
                             <thead class="text-danger">
@@ -18,7 +18,7 @@
                                 <th>Hes Kodu</th>
                                 <th>Gecelik Ücret</th>
                             </thead>
-                            
+
                             <tbody>
                                 <tr *ngFor="let g of guests">
                                     <td>{{g.guestId}}</td>
@@ -27,16 +27,44 @@
                                     <td>{{g.tcKimlikNo}}</td>
                                     <td>{{g.hesKodu}}</td>
                                     <td class="text-danger">{{g.ucret}}₺</td>
-                                    <td><button mat-raised-button class="btn btn-info" (click)="onSelectGuest(g)">Düzenle</button></td>
-                                    <td><button mat-raised-button class="btn btn-danger"(click)="deleteGuest(g)">Sil</button></td>
-                                    
+                                    <td><button mat-raised-button class="btn btn-info" data-toggle="modal"
+                                            data-target="#gModal" (click)="onSelectGuest(g)">Düzenle</button></td>
+                                    <td><button mat-raised-button class="btn btn-danger" (click)="deleteGuest(g)">Sil</button></td>
+
 
                                 </tr>
                             </tbody>
                         </table>
+
+                        <!--MODAL BAŞLANGICI-->
+
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="gModal" tabindex="-1" role="dialog" aria-labelledby="gModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="gModalLabel">Düzenle</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <guest-details [guest]="selectedGuest" [guests]="guests"></guest-details>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--MODAL BİTİŞİ-->
                         <!-- <guest-details [guest]="selectedGuest"></guest-details> -->
-                            <hr class="my-3">
-                            <yeni-rezervasyon [Guests]="guests"></yeni-rezervasyon>
+
                     </div>
                 </div>
             </div>

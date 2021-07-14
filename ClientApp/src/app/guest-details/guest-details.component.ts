@@ -10,34 +10,25 @@ import { Guest } from 'app/model';
 export class GuestDetailsComponent implements OnInit {
 
   @Input() guest : Guest
+  @Input() guests : Guest[];
 
   constructor(private guestService:GuestService) { }
 
   ngOnInit(): void {
   }
 
-  addGuest(id: number,odano: number,adi: string,soyadi: string,ucret: string,tckimlikno: string,heskodu: string,notlar: string,DogumYeri: string)
-  {
-    
-    //let g = new Guest(id,odano,adi,soyadi,tckimlikno,heskodu,ucret,notlar,DogumYeri);
-    //this.guestService.saveGuest(g);
-    //this.guest = null;
+  addGuest(id, ucret, odano, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar) {
+
+    let g = new Guest(id, ucret, odano, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar);
+    this.guestService.updateGuest(g)
+      .subscribe(result => {
+        this.guests.splice(this.guests.findIndex(x => x.GuestId==g.GuestId),1,g);
+      });
+      this.guest = null;
 
   }
 
-  /*
-  this.GuestId = id;
-        this.Ucret = ucret;
-        this.OdaNo = odano;
-        this.Adi = adi;
-        this.Soyadi = soyadi;
-        this.TcKimlikNo = tckimlikno;
-        this.HesKodu = hesKodu;
-        this.CiltNo = ciltno;
-        this.DogumYeri = dogumyeri;
-        this.Notlar = notlar;
-  */
-
+  
   
 
   
