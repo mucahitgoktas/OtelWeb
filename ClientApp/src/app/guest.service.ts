@@ -21,6 +21,11 @@ export class GuestService {
     return this.http.post<Guest>(this.baseUrl + 'api/guests', guest);
   }
 
+  updateGuest(guest: Guest) {
+    return this.http.put<Guest>(this.baseUrl + 'api/guests/'+guest.GuestId, guest)
+
+  }
+
   getGuestById(id: number) {
     return this.model.guests.find(i => i.GuestId == id);
   }
