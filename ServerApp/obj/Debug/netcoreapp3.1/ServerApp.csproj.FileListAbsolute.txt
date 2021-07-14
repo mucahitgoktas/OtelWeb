@@ -8,6 +8,7 @@ C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\ServerApp
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.runtimeconfig.dev.json
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.dll
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.pdb
+C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csprojAssemblyReference.cache
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.AssemblyInfoInputs.cache
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.AssemblyInfo.cs
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.CoreCompileInputs.cache
@@ -131,7 +132,6 @@ C:\Users\Lenovo\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\Newto
 C:\Users\Lenovo\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.Views.dll
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.Views.pdb
-C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.AssemblyReference.cache
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.RazorAssemblyInfo.cache
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.RazorAssemblyInfo.cs
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.TagHelpers.input.cache

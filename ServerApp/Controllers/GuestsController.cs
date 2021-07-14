@@ -12,12 +12,12 @@ namespace ServerApp.Controllers
     // localhost:5000/api/guests
     [ApiController]
     [Route("api/[controller]")]
-    public class GuestsController : ControllerBase
+    public class GuestsController:ControllerBase
     {
         private OtelContext _context;
         public GuestsController(OtelContext context)
         {
-            _context = context;
+           _context = context;
         }
 
         // localhost:5000/api/guests
@@ -26,9 +26,9 @@ namespace ServerApp.Controllers
         {
             var guests = await _context
             .Guests
-            .Select(p => GuestToDTO(p))
+            .Select(p=> GuestToDTO(p))
             .ToListAsync();
-            return Ok(guests);
+            return Ok(guests);      
         }
 
 
@@ -37,7 +37,7 @@ namespace ServerApp.Controllers
         public async Task<IActionResult> GetGuest(int id)
         {
             var p = await _context.Guests.FindAsync(id);
-            if (p == null)
+            if (p==null)
             {
                 return NotFound();
             }
@@ -51,21 +51,21 @@ namespace ServerApp.Controllers
             _context.Guests.Add(guest1);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction(nameof(GetGuest), new { id = guest1.GuestId }, GuestToDTO(guest1));
+            return CreatedAtAction(nameof(GetGuest), new {id=guest1.GuestId},GuestToDTO(guest1));
         }
-
-
+        
+        
         // localhost/api/guest/3  
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateGuest(int id, Guest guest2)
+        public async Task<IActionResult> UpdateGuest(int id,Guest guest2)
         {
-            if (id != guest2.GuestId)
+            if (id!=guest2.GuestId)
             {
                 return BadRequest();
             }
 
             var guest = await _context.Guests.FindAsync(id);
-            if (guest == null)
+            if (guest==null)
             {
                 return NotFound();
             }
@@ -81,20 +81,20 @@ namespace ServerApp.Controllers
             }
             catch (System.Exception)
             {
-
+                
                 return NotFound();
             }
 
             return NoContent();
-
-
+            
+             
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteGuest(int id)
         {
             var guest = await _context.Guests.FindAsync(id);
-            if (guest == null)
+            if (guest==null)        
             {
                 return NotFound();
             }
@@ -107,8 +107,8 @@ namespace ServerApp.Controllers
 
         private static GuestDTO GuestToDTO(Guest g)
         {
-            return new GuestDTO()
-            {
+          return new GuestDTO()
+          {
                 GuestId = g.GuestId,
                 Adi = g.Adi,
                 Soyadi = g.Soyadi,
@@ -118,10 +118,10 @@ namespace ServerApp.Controllers
                 OdaNo = g.OdaNo,
                 Ucret = g.Ucret,
                 CiltNo = g.CiltNo,
-                Notlar = g.Notlar
+                Notlar = g.Notlar,
+                
 
-
-            };
+          };  
         }
     }
 }

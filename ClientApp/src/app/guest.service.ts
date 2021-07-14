@@ -33,7 +33,7 @@ export class GuestService {
     else {
       const g = this.getGuestById(guest.GuestId);
       g.GuestId = guest.GuestId;
-      g.adi = guest.adi;
+      g.Adi = guest.Adi;
       g.Soyadi = guest.Soyadi;
       g.TcKimlikNo = guest.TcKimlikNo;
       g.HesKodu = guest.HesKodu;
