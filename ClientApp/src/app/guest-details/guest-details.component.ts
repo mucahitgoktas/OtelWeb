@@ -15,16 +15,21 @@ export class GuestDetailsComponent implements OnInit {
   constructor(private guestService:GuestService) { }
 
   ngOnInit(): void {
+    debugger;
+    if(this.guest) {
+      var asdf= this.guest;
+      debugger;
+    }
   }
 
   addGuest(id, ucret, odano, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar) {
 
-    let g = new Guest(id, ucret, odano, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar);
-    this.guestService.updateGuest(g)
-      .subscribe(result => {
-        this.guests.splice(this.guests.findIndex(x => x.GuestId==g.GuestId),1,g);
-      });
-      this.guest = null;
+    // let g = new Guest(id, ucret, odano, adi, soyadi, tckimlikno, heskodu, ciltno, dogumyeri, notlar);
+    // this.guestService.updateGuest(g)
+    //   .subscribe(result => {
+    //     this.guests.splice(this.guests.findIndex(x => x.guestId==g.guestId),1,g);
+    //   });
+    //   this.guest = null;
 
   }
 

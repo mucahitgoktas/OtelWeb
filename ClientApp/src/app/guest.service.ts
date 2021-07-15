@@ -22,35 +22,36 @@ export class GuestService {
   }
 
   updateGuest(guest: Guest) {
-    return this.http.put<Guest>(this.baseUrl + 'api/guests/'+guest.GuestId, guest)
+    return this.http.put<Guest>(this.baseUrl + 'api/guests/'+guest.guestId, guest)
 
   }
 
   deleteGuest(guest: Guest): Observable<Guest> {
-    return this.http.delete<Guest>(this.baseUrl + 'api/guests/'+guest.GuestId);
+    debugger;
+    return this.http.delete<Guest>(this.baseUrl + 'api/guests/'+guest.guestId);
   }
 
   getGuestById(id: number) {
-    return this.model.guests.find(i => i.GuestId == id);
+    return this.model.guests.find(i => i.guestId == id);
   }
 
   saveGuest(guest: Guest) {
-    if (guest.GuestId == 0) {
-      guest.GuestId = this.getGuests.length + 1;
+    if (guest.guestId == 0) {
+      guest.guestId = this.getGuests.length + 1;
       this.model.guests.push(guest);
     }
     else {
-      const g = this.getGuestById(guest.GuestId);
-      g.GuestId = guest.GuestId;
-      g.Adi = guest.Adi;
-      g.Soyadi = guest.Soyadi;
-      g.TcKimlikNo = guest.TcKimlikNo;
-      g.HesKodu = guest.HesKodu;
-      g.DogumYeri = guest.DogumYeri;
-      g.OdaNo = guest.OdaNo;
-      g.Ucret = guest.Ucret;
-      g.CiltNo = guest.CiltNo;
-      g.Notlar = guest.Notlar;
+      const g = this.getGuestById(guest.guestId);
+      g.guestId = guest.guestId;
+      g.adi = guest.adi;
+      g.soyadi = guest.soyadi;
+      g.tcKimlikNo = guest.tcKimlikNo;
+      g.hesKodu = guest.hesKodu;
+      g.dogumYeri = guest.dogumYeri;
+      g.odaNo = guest.odaNo;
+      g.ucret = guest.ucret;
+      g.ciltNo = guest.ciltNo;
+      g.notlar = guest.notlar;
       
     }
 

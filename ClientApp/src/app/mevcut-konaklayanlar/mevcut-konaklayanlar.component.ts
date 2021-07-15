@@ -30,12 +30,15 @@ export class MevcutKonaklayanlarComponent implements OnInit {
   title = 'Mevcut Konaklayanlar'
 
   onSelectGuest(guest: Guest) {
+    debugger;
     this.selectedGuest = guest;
   }
 
   deleteGuest(guest: Guest) {
+    debugger;
     this.guestService.deleteGuest(guest).subscribe(g=> {
-      this.guests.splice(this.guests.findIndex(g=>g.GuestId == guest.GuestId),1)
+      debugger;
+      this.getGuests();
     });
 
   }

@@ -9,81 +9,73 @@
                     </div>
                     <div class="card-body">
                         <form>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-md-3" style="display: none;">
                                     <mat-form-field class="example-full-width">
                                         <input #adig matInput placeholder="Adi*" type="text" name="adi">
                                     </mat-form-field>
                                 </div>
+                            </div> -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input #adi matInput placeholder="Adı*" type="text" name="adi">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input #soyadi matInput placeholder="Soyadı*" type="text" name="soyadi">
+                                    </mat-form-field>
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                        <input #soyadig matInput placeholder="Adı*" type="text" name="soyadi">
+                                        <input #ciltNo matInput placeholder="Cilt No*" type="text" name="ciltNo">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                        <input #tckimliknog matInput placeholder="Soyadı*" type="text"
-                                            name="tckimlikno">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input #adih matInput placeholder="Cilt No*" type="text" name="adih">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input #ciltnoh matInput placeholder="Notlar*" type="text"
-                                            name="ciltnoh">
+                                        <input #notlar matInput placeholder="Notlar*" type="text" name="notlar">
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <mat-form-field class="example-full-width">
-                                        <input #heskodug matInput placeholder="TC Kimlik No" type="text" name="heskodu">
+                                        <input #tcKimlikNo matInput placeholder="TC Kimlik No" type="text" name="tcKimlikNo">
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input #dogumyerig matInput placeholder="HES Kodu" type="text"
-                                            name="dogumyeri">
+                                        <input #hesKodu matInput placeholder="HES Kodu" type="text" name="hesKodu">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input #odanog matInput placeholder="Doğum Yeri" type="text" name="odano">
+                                        <input #dogumYeri matInput placeholder="Doğum Yeri" type="text" name="dogumYeri">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input #ucretg matInput placeholder="Oda No" type="text" name="ucret">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-5" style="display: none;">
-                                    <mat-form-field class="example-full-width">
-                                        <input #ciltnog matInput placeholder="Adı" name="ciltno">
+                                        <input #odaNo matInput placeholder="Oda No" type="text" name="odaNo">
                                     </mat-form-field>
                                 </div>
                             </div>
 
-
+<!-- 
 
                             <div class="form-group">
                                 <label class="bmd-label-floating"> Ucret </label>
                                 <textarea #notlarg class="form-control" rows="5" name="notlar"></textarea>
-                            </div>
+                            </div> -->
 
 
                             <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                                (click)="addGuest(adig.value,soyadig.value,tckimliknog.value,heskodug.value,dogumyerig.value,odanog.value,ucretg.value,notlarg.value,adih.value,ciltnoh.value);
-                                 adi.value='';soyadi.value='';tckimlikno.value='';heskodu.value='';ciltno.value='';dogumyeri.value='';notlar.value='';odano.value='';ucret.value=''">Kaydet</button>
+                                (click)="addGuest(adi.value, soyadi.value, ciltNo.value, tcKimlikNo.value, hesKodu.value, notlar.value, dogumYeri.value, odaNo.value)"
+                                >Kaydet</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
