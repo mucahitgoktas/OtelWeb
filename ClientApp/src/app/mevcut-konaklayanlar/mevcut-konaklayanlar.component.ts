@@ -30,14 +30,12 @@ export class MevcutKonaklayanlarComponent implements OnInit {
   title = 'Mevcut Konaklayanlar'
 
   onSelectGuest(guest: Guest) {
-    debugger;
+
     this.selectedGuest = guest;
   }
 
   deleteGuest(guest: Guest) {
-    debugger;
-    this.guestService.deleteGuest(guest).subscribe(g=> {
-      debugger;
+    this.guestService.deleteGuest(guest).subscribe(g => {
       this.getGuests();
     });
 

@@ -25,10 +25,10 @@ export class YeniRezervasyonComponent implements OnInit {
     g.dogumYeri = dogumyeri;
     g.notlar = notlar;
     g.guestId = 0;
-    debugger;
+    
     this.guestService.addGuest(g)
       .subscribe(guest => {
-        debugger;
+        
         this.guests.push(guest);
       });
 

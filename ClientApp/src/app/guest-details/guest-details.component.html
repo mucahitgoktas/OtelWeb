@@ -1,92 +1,68 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-8">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title">{{title}}</h4>
-                        <p class="card-category">{{aboutT}}</p>
+                        <h4 class="card-title">Düzenle </h4>
+                        <p class="card-category">Düzenlenecek öğeler listesi</p>
                     </div>
-                    <div class="card-body">
+                    <div *ngIf="guest" class="card-body">
                         <form>
                             <div class="row">
-                                <div class="col-md-3" style="display: none;">
+                                <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                        <input #adig matInput placeholder="Adi*" type="text" name="adi">
+                                        <input [value]="guest.adi" #adi matInput placeholder="Adı*" type="text" name="adi">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-6">
+                                    <mat-form-field class="example-full-width">
+                                        <input [value]="guest.soyadi" #soyadi matInput placeholder="Soyadı*" type="text" name="soyadi">
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                        <input #soyadig matInput placeholder="Adı*" type="text" name="soyadi">
+                                        <input [value]="guest.ciltNo" #ciltNo matInput placeholder="Cilt No*" type="text" name="ciltNo">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                        <input #tckimliknog matInput placeholder="Soyadı*" type="text"
-                                            name="tckimlikno">
-                                    </mat-form-field>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input #adih matInput placeholder="Cilt No*" type="text" name="adih">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-6">
-                                    <mat-form-field class="example-full-width">
-                                        <input #ciltnoh matInput placeholder="Notlar*" type="text"
-                                            name="ciltnoh">
+                                        <input [value]="guest.notlar" #notlar matInput placeholder="Notlar*" type="text" name="notlar">
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-12">
                                     <mat-form-field class="example-full-width">
-                                        <input #heskodug matInput placeholder="TC Kimlik No" type="text" name="heskodu">
+                                        <input [value]="guest.tcKimlikNo" #tcKimlikNo matInput placeholder="TC Kimlik No" type="text"
+                                            name="tcKimlikNo">
                                     </mat-form-field>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input #dogumyerig matInput placeholder="HES Kodu" type="text"
-                                            name="dogumyeri">
+                                        <input [value]="guest.hesKodu" #hesKodu matInput placeholder="HES Kodu" type="text" name="hesKodu">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input #odanog matInput placeholder="Doğum Yeri" type="text" name="odano">
+                                        <input [value]="guest.dogumYeri" #dogumYeri matInput placeholder="Doğum Yeri" type="text"
+                                            name="dogumYeri">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
-                                        <input #ucretg matInput placeholder="Oda No" type="text" name="ucret">
-                                    </mat-form-field>
-                                </div>
-                                <div class="col-md-5" style="display: none;">
-                                    <mat-form-field class="example-full-width">
-                                        <input #ciltnog matInput placeholder="Adı" name="ciltno">
+                                        <input [value]="guest.odaNo" #odaNo matInput placeholder="Oda No" type="text" name="odaNo">
                                     </mat-form-field>
                                 </div>
                             </div>
-
-
-                            
-
-
-
-                            <div class="form-group">
-                                <label class="bmd-label-floating"> Ucret </label>
-                                <textarea #notlarg class="form-control" rows="5" name="notlar"></textarea>
-                            </div>
-
 
                             <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                                (click)="addGuest(adig.value,soyadig.value,tckimliknog.value,heskodug.value,dogumyerig.value,odanog.value,ucretg.value,notlarg.value,adih.value,ciltnoh.value);">Kaydet</button>
-                            
+                                (click)="addGuest(adi.value, soyadi.value, ciltNo.value, tcKimlikNo.value, hesKodu.value, notlar.value, dogumYeri.value, odaNo.value); adi.value=''; soyadi.value=''; ciltNo.value=''; tcKimlikNo.value=''; hesKodu.value=''; notlar.value=''; dogumYeri.value=''; odaNo.value='';">Kaydet</button>
+                            <div class="clearfix"></div>
                         </form>
                     </div>
                 </div>
