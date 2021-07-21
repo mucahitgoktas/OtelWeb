@@ -24,6 +24,19 @@ export class Guest {
     ciltNo: string;
     notlar: string;
 
+    // constructor(guestId: number, adi: string, soyadi: string, tcKimlikNo: string, hesKodu: string, dogumYeri: string, odaNo: number, ciltNo: string, notlar: string) {
+    //     this.guestId = guestId;
+    //     this.adi = adi;
+    //     this.soyadi = soyadi;
+    //     this.tcKimlikNo = tcKimlikNo;
+    //     this.hesKodu = hesKodu;
+    //     this.dogumYeri = dogumYeri;
+    //     this.odaNo = odaNo;
+    //     //this.ucret = ucret;
+    //     this.ciltNo = ciltNo;
+    //     this.notlar = notlar;
+
+    // }
+
 }
 
-// const m = new Model();

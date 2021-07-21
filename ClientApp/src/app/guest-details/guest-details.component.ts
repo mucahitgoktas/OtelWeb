@@ -24,17 +24,17 @@ export class GuestDetailsComponent implements OnInit {
     // }
   }
 
-  addGuest(adi, soyadi, ciltno, tckimlikno, heskodu, notlar, dogumyeri, odano, guestId) {
+  addGuest(adi, soyadi, ciltNo, tcKimlikNo, hesKodu, notlar, dogumYeri, odaNo, guestId) {
     let g = new Guest();
-    g.adi = adi;
-    g.odaNo = odano;
-    g.soyadi = soyadi;
-    g.tcKimlikNo = tckimlikno;
-    g.hesKodu = heskodu;
-    g.ciltNo = ciltno;
-    g.dogumYeri = dogumyeri;
-    g.notlar = notlar;
-    g.guestId = guestId;
+     g.adi = adi;
+     g.odaNo = odaNo;
+     g.soyadi = soyadi;
+     g.tcKimlikNo = tcKimlikNo;
+     g.hesKodu = hesKodu;
+     g.ciltNo = ciltNo;
+     g.dogumYeri = dogumYeri;
+     g.notlar = notlar;
+     g.guestId = guestId;
     
     debugger;
 
@@ -43,6 +43,7 @@ export class GuestDetailsComponent implements OnInit {
         this.guests.splice(this.guests.findIndex(x=>x.guestId==g.guestId),1,g);
         
       });
+      debugger;
       
 
   }
