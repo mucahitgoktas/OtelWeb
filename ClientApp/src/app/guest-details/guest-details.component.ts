@@ -26,7 +26,8 @@ export class GuestDetailsComponent implements OnInit {
 
   addGuest(adi, soyadi, ciltNo, tcKimlikNo, hesKodu, notlar, dogumYeri, odaNo, guestId) {
     let g = new Guest();
-     g.adi = adi;
+    this.guest.guestId = g.guestId; 
+    g.adi = adi;
      g.odaNo = odaNo;
      g.soyadi = soyadi;
      g.tcKimlikNo = tcKimlikNo;
@@ -35,6 +36,8 @@ export class GuestDetailsComponent implements OnInit {
      g.dogumYeri = dogumYeri;
      g.notlar = notlar;
      g.guestId = guestId;
+
+     console.log(this.guest.guestId);
     
     debugger;
 

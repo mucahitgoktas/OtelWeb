@@ -58,10 +58,15 @@
                                         <input [value]="guest.odaNo" #odaNo matInput placeholder="Oda No" type="text" name="odaNo">
                                     </mat-form-field>
                                 </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input [value]="guest.guestId" #guestId matInput placeholder="Guest ID" type="text" name="guestId">
+                                    </mat-form-field>
+                                </div>
                             </div>
 
                             <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                                (click)="addGuest(adi.value, soyadi.value, ciltNo.value, tcKimlikNo.value, hesKodu.value, notlar.value, dogumYeri.value, odaNo.value); adi.value=''; soyadi.value=''; ciltNo.value=''; tcKimlikNo.value=''; hesKodu.value=''; notlar.value=''; dogumYeri.value=''; odaNo.value='';">Kaydet</button>
+                                (click)="addGuest(adi.value, soyadi.value, ciltNo.value, tcKimlikNo.value, hesKodu.value, notlar.value, dogumYeri.value, odaNo.value, guestId.value); adi.value=''; soyadi.value=''; ciltNo.value=''; tcKimlikNo.value=''; hesKodu.value=''; notlar.value=''; dogumYeri.value=''; odaNo.value='';">Kaydet</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>
