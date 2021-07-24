@@ -8,13 +8,13 @@ import { Guest } from 'app/model';
   styleUrls: ['./yeni-rezervasyon.component.css']
 })
 export class YeniRezervasyonComponent implements OnInit {
-  @Input() guests: Guest[];
+  @Input() guests: Guest[] = [];
   constructor(private guestService: GuestService) { }
 
   ngOnInit(): void {
   }
 
-  addGuest(adi, soyadi, ciltno, tckimlikno, heskodu, notlar, dogumyeri, odano) {
+  addGuest(adi, soyadi, ciltno, tckimlikno, heskodu, notlar, dogumyeri, odano, ucret) {
     let g = new Guest();
     g.adi = adi;
     g.odaNo = odano;
@@ -24,13 +24,15 @@ export class YeniRezervasyonComponent implements OnInit {
     g.ciltNo = ciltno;
     g.dogumYeri = dogumyeri;
     g.notlar = notlar;
+    g.ucret = ucret;
     g.guestId = 0;
     
     this.guestService.addGuest(g)
       .subscribe(guest => {
         
-        this.guests.push(guest);
+        this.guests.push(g);
       });
+      debugger;
 
   }
 

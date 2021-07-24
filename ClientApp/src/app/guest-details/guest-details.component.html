@@ -24,7 +24,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <mat-form-field class="example-full-width">
-                                        <input [value]="guest.ciltNo" #ciltNo matInput placeholder="Cilt No*" type="text" name="ciltNo">
+                                        <input [value]="guest.ciltNo" #ciltNo matInput placeholder="Cilt No*" type="text" name="ciltno">
                                     </mat-form-field>
                                 </div>
                                 <div class="col-md-6">
@@ -60,13 +60,19 @@
                                 </div>
                                 <div class="col-md-4">
                                     <mat-form-field class="example-full-width">
+                                        <input [value]="guest.ucret" #ucret matInput placeholder="Ücret" type="text" name="ucret">
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-4" style="display: none;">
+                                    <mat-form-field class="example-full-width">
                                         <input [value]="guest.guestId" #guestId matInput placeholder="Guest ID" type="text" name="guestId">
                                     </mat-form-field>
                                 </div>
+                                
                             </div>
 
                             <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                                (click)="addGuest(adi.value, soyadi.value, ciltNo.value, tcKimlikNo.value, hesKodu.value, notlar.value, dogumYeri.value, odaNo.value, guestId.value); adi.value=''; soyadi.value=''; ciltNo.value=''; tcKimlikNo.value=''; hesKodu.value=''; notlar.value=''; dogumYeri.value=''; odaNo.value='';">Kaydet</button>
+                                (click)="addGuest(adi.value, soyadi.value, ciltNo.value, tcKimlikNo.value, hesKodu.value, notlar.value, dogumYeri.value, odaNo.value, guestId.value, ucret.value); adi.value=''; soyadi.value=''; ciltNo.value=''; tcKimlikNo.value=''; hesKodu.value=''; notlar.value=''; dogumYeri.value=''; odaNo.value=''; guestId.value='';ucret.value='';">Kaydet</button>
                             <div class="clearfix"></div>
                         </form>
                     </div>

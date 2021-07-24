@@ -74,6 +74,11 @@ namespace ServerApp.Controllers
             guest.Soyadi = guest2.Soyadi;
             guest.HesKodu = guest2.HesKodu;
             guest.TcKimlikNo = guest2.TcKimlikNo;
+            guest.CiltNo = guest2.CiltNo;
+            guest.Notlar = guest2.Notlar;
+            guest.DogumYeri = guest2.DogumYeri;
+            guest.OdaNo = guest2.OdaNo;
+            guest.Ucret = guest2.Ucret;
 
             try
             {

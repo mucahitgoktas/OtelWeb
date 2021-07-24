@@ -63,6 +63,11 @@
                                         <input #odaNo matInput placeholder="Oda No" type="text" name="odaNo">
                                     </mat-form-field>
                                 </div>
+                                <div class="col-md-4">
+                                    <mat-form-field class="example-full-width">
+                                        <input #ucret matInput placeholder="Ücret" type="text" name="ucret">
+                                    </mat-form-field>
+                                </div>
                             </div>
 
 <!-- 
@@ -74,7 +79,7 @@
 
 
                             <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                                (click)="addGuest(adi.value, soyadi.value, ciltNo.value, tcKimlikNo.value, hesKodu.value, notlar.value, dogumYeri.value, odaNo.value)"
+                                (click)="addGuest(adi.value, soyadi.value, ciltNo.value, tcKimlikNo.value, hesKodu.value, notlar.value, dogumYeri.value, odaNo.value, ucret.value); adi.value=''; soyadi.value=''; ciltNo.value=''; tcKimlikNo.value=''; hesKodu.value=''; notlar.value=''; dogumYeri.value=''; odaNo.value='';ucret.value='';"
                                 >Kaydet</button>
                             <div class="clearfix"></div>
                         </form>

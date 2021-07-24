@@ -24,30 +24,29 @@ export class GuestDetailsComponent implements OnInit {
     // }
   }
 
-  addGuest(adi, soyadi, ciltNo, tcKimlikNo, hesKodu, notlar, dogumYeri, odaNo, guestId) {
+  addGuest(adi, soyadi, ciltNo, tcKimlikNo, hesKodu, notlar, dogumYeri, odaNo, guestId, ucret) {
     let g = new Guest();
-    this.guest.guestId = g.guestId; 
+    this.guest.guestId = g.guestId;
     g.adi = adi;
-     g.odaNo = odaNo;
-     g.soyadi = soyadi;
-     g.tcKimlikNo = tcKimlikNo;
-     g.hesKodu = hesKodu;
-     g.ciltNo = ciltNo;
-     g.dogumYeri = dogumYeri;
-     g.notlar = notlar;
-     g.guestId = guestId;
+    g.odaNo = odaNo;
+    g.soyadi = soyadi;
+    g.tcKimlikNo = tcKimlikNo;
+    g.hesKodu = hesKodu;
+    g.ciltNo = ciltNo;
+    g.dogumYeri = dogumYeri;
+    g.notlar = notlar;
+    g.guestId = guestId;
+    g.ucret = ucret;
 
-     console.log(this.guest.guestId);
-    
-    debugger;
+
 
     this.guestService.updateGuest(g)
       .subscribe(result => {
-        this.guests.splice(this.guests.findIndex(x=>x.guestId==g.guestId),1,g);
-        
+        this.guests.splice(this.guests.findIndex(x => x.guestId == g.guestId), 1, g);
+
       });
-      debugger;
-      
+    debugger;
+
 
   }
 
