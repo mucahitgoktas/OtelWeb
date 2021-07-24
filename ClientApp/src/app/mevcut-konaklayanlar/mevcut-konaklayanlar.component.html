@@ -27,16 +27,22 @@
                                     <td>{{g.tcKimlikNo}}</td>
                                     <td>{{g.hesKodu}}</td>
                                     <td class="text-danger">{{g.ucret}}₺</td>
-                                    <td><button mat-raised-button class="btn btn-info" (click)="onSelectGuest(g)">Düzenle</button></td>
-                                    <!-- <td><button mat-raised-button class="btn btn-info" data-toggle="modal"
+                                    <!-- <td><button mat-raised-button class="btn btn-info" (click)="onSelectGuest(g)">Düzenle</button></td> -->
+                                    <td><button mat-raised-button class="btn btn-info" data-toggle="modal"
                                             data-target="#gModal" (click)="onSelectGuest(g)">Düzenle</button></td>
+
                                     <div class="modal fade" id="gModal" tabindex="-1" role="dialog"
                                         aria-labelledby="gModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-dialog modal-lg" role="document">
+
                                             <div class="modal-content">
                                                 <div class="modal-header">
                                                     <h5 class="modal-title" id="gModalLabel">Düzenle</h5>
-                                                    <button type="button" class="close" data-dismiss="modal"
+                                                    <!-- <button type="button" class="btn btn-default"
+                                                       data-dismiss="modal">Close</button> -->
+
+
+                                                    <button type="button" class="btn btn-danger" data-dismiss="modal"
                                                         aria-label="Close">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
@@ -45,15 +51,12 @@
                                                     <guest-details [guest]="selectedGuest" [guests]="guests">
                                                     </guest-details>
                                                 </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary"
-                                                        data-dismiss="modal">Close</button>
-                                                </div>
                                             </div>
                                         </div>
-                                    </div> -->
+                                    </div>
 
-                                    
+
+
                                     <td><button mat-raised-button class="btn btn-danger"
                                             (click)="deleteGuest(g)">Sil</button></td>
 
@@ -61,23 +64,9 @@
                                 </tr>
                             </tbody>
                         </table>
-                        
-                        
-
-
-
-                        <!-- Modal -->
-
-
-                        <!--MODAL BİTİŞİ-->
-                        <!-- <guest-details [guest]="selectedGuest"></guest-details> -->
-
                     </div>
                 </div>
             </div>
-                    </div>
-                    <guest-details [guest]="selectedGuest">
-                    </guest-details>
-
+        </div>
     </div>
 </div>
