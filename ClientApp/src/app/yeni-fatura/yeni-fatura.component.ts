@@ -15,23 +15,20 @@ export class YeniFaturaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addFatura(adi, soyadi, ciltno, tckimlikno, heskodu, notlar, dogumyeri, odano, ucret) {
-    let g = new Guest();
-    g.adi = adi;
-    g.odaNo = odano;
-    g.soyadi = soyadi;
-    g.tcKimlikNo = tckimlikno;
-    g.hesKodu = heskodu;
-    g.ciltNo = ciltno;
-    g.dogumYeri = dogumyeri;
-    g.notlar = notlar;
-    g.ucret = ucret;
-    g.guestId = 0;
+  addFatura(unvan, adres, vergiDairesi, vergiNo, not1, not2) {
+    let g = new Fatura();
+    g.unvan = unvan;
+    g.adres = adres;
+    g.vergiDairesi = vergiDairesi;
+    g.vergiNo = vergiNo;
+    g.not1 = not1;
+    g.not2 = not2;
+    g.id = 0;
     
-    this.guestService.addGuest(g)
-      .subscribe(guest => {
+    this.faturaService.addFaturalar(g)
+      .subscribe(fatura => {
         
-        this.guests.push(g);
+        this.faturalar.push(g);
       });
       debugger;
 
