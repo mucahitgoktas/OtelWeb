@@ -10,5 +10,6 @@ namespace ServerApp.Data
             
         }
         public DbSet<Guest> Guests { get; set; }
+        public DbSet<Fatura> Faturalar { get; set; }
     }
 }

@@ -45,6 +45,7 @@ export class GuestDetailsComponent implements OnInit {
         this.guests.splice(this.guests.findIndex(x => x.guestId == g.guestId), 1, g);
 
       });
+      location.reload();
     debugger;
 
 
