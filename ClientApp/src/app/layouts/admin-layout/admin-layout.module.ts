@@ -8,7 +8,7 @@ import { UserProfileComponent } from '../../user-profile/user-profile.component'
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
-import { MapsComponent } from '../../maps/maps.component';
+// import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import {MatButtonModule} from '@angular/material/button';
@@ -21,6 +21,8 @@ import { YeniRezervasyonComponent } from 'app/yeni-rezervasyon/yeni-rezervasyon.
 import { MevcutKonaklayanlarComponent } from 'app/mevcut-konaklayanlar/mevcut-konaklayanlar.component';
 import { GuestDetailsComponent } from 'app/guest-details/guest-details.component';
 import { GuestEditComponent } from 'app/guest-edit/guest-edit.component';
+import { YeniFaturaComponent } from 'app/yeni-fatura/yeni-fatura.component';
+
 
 @NgModule({
   imports: [
@@ -41,13 +43,14 @@ import { GuestEditComponent } from 'app/guest-edit/guest-edit.component';
     TableListComponent,
     TypographyComponent,
     IconsComponent,
-    MapsComponent,
+    // MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
     YeniRezervasyonComponent,
     MevcutKonaklayanlarComponent,
     GuestDetailsComponent,
     GuestEditComponent,
+    YeniFaturaComponent
   ]
 })
 
