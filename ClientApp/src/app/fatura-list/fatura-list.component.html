@@ -1,7 +1,7 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <div class="card">
                     <div class="card-header card-header-danger">
                         <h4 class="card-title">{{title}}</h4>
@@ -9,56 +9,65 @@
                     </div>
 
                     <div class="card-content table-responsive table-full-width">
-                        <table class="table">
-                            <thead class="text-danger">
-                                <th>Ticari Ünvanı</th>
-                                <th>Adresi</th>
-                                <th>Vergi Dairesi</th>
-                                <th>Vergi Numarası</th>
+                        
+                        <div class="row" style="position: absolute;">
+                            <div class="col-sm-10">
+                                <div class="form-group">
+                                    <input type="text" value="" placeholder="Ara" class="form-control"
+                                        [(ngModel)]="unvan" (input)="Search()" />
+                                </div>
+                            </div>
+                            <table class="table">
+                                <thead class="text-danger">
+                                    <th>Ticari Ünvanı</th>
+                                    <th>Adresi</th>
+                                    <th>Vergi Dairesi</th>
+                                    <th>Vergi Numarası</th>
 
-                            </thead>
+                                </thead>
 
-                            <tbody>
-                                <tr *ngFor="let g of faturalar">
-                                    <td>{{g.unvan}}</td>
-                                    <td>{{g.adres}}</td>
-                                    <td>{{g.vergiDairesi}}</td>
-                                    <td>{{g.vergiNo}}</td>
-                                    <td><button mat-raised-button class="btn btn-info" data-toggle="modal"
-                                            data-target="#gModal" (click)="onSelectfatura(g)">Düzenle</button></td>
+                                <tbody>
+                                    <tr *ngFor="let g of faturalar">
+                                        <td>{{g.unvan}}</td>
+                                        <td>{{g.adres}}</td>
+                                        <td>{{g.vergiDairesi}}</td>
+                                        <td>{{g.vergiNo}}</td>
+                                        <td><button mat-raised-button class="btn btn-info" data-toggle="modal"
+                                                data-target="#gModal" (click)="onSelectFatura(g)">Düzenle</button></td>
 
-                                    <div class="modal fade" id="gModal" tabindex="-1" role="dialog"
-                                        aria-labelledby="gModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal fade" id="gModal" tabindex="-1" role="dialog"
+                                            aria-labelledby="gModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
 
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="gModalLabel">Düzenle</h5>
-                                                    <button type="button" class="btn btn-danger" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <guest-details [fatura]="selectedFatura" [faturalar]="faturalar">
-                                                    </guest-details>
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="gModalLabel">Düzenle</h5>
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <fatura-details [fatura]="selectedFatura"
+                                                            [faturalar]="faturalar">
+                                                        </fatura-details>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
 
 
-                                    <td><button mat-raised-button class="btn btn-danger"
-                                            (click)="deleteFatura(g)">Sil</button></td>
+                                        <td><button mat-raised-button class="btn btn-danger"
+                                                (click)="deleteFatura(g)">Sil</button></td>
 
 
-                                </tr>
-                            </tbody>
-                        </table>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

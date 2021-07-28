@@ -8,9 +8,9 @@ import { Fatura } from 'app/model';
   styleUrls: ['./fatura-list.component.css']
 })
 export class FaturaListComponent implements OnInit {
-
   selectedFatura: Fatura;
   faturalar: Fatura[];
+  unvan : string;
 
   constructor(private faturaService: FaturaService) { }
 
@@ -28,7 +28,7 @@ export class FaturaListComponent implements OnInit {
 
   title = 'Fatura Listesi'
 
-  onSelectFatuara(fatura: Fatura) {
+  onSelectFatura(fatura: Fatura) {
 
     this.selectedFatura = fatura;
   }
@@ -39,5 +39,15 @@ export class FaturaListComponent implements OnInit {
     });
 
   }
+
+  Search(){
+    if (this.unvan !="") {
+      this.faturalar = this.faturalar.filter(res=>{
+        return res.unvan.toLocaleLowerCase().match(this.unvan.toLocaleLowerCase());
+      })
+    } else if (this.unvan == "") {
+      this.ngOnInit();
+    }
+    };
 
 }

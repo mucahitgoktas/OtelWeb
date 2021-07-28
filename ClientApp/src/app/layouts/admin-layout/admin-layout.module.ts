@@ -23,6 +23,7 @@ import { GuestDetailsComponent } from 'app/guest-details/guest-details.component
 import { GuestEditComponent } from 'app/guest-edit/guest-edit.component';
 import { YeniFaturaComponent } from 'app/yeni-fatura/yeni-fatura.component';
 import { FaturaListComponent } from 'app/fatura-list/fatura-list.component';
+import { FaturaDetailsComponent } from 'app/fatura-details/fatura-details.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { FaturaListComponent } from 'app/fatura-list/fatura-list.component';
     GuestDetailsComponent,
     GuestEditComponent,
     YeniFaturaComponent,
-    FaturaListComponent
+    FaturaListComponent,
+    FaturaDetailsComponent
 
   ]
 })

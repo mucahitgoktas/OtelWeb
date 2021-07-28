@@ -13,6 +13,7 @@ import { GuestDetailsComponent } from 'app/guest-details/guest-details.component
 import { GuestEditComponent } from 'app/guest-edit/guest-edit.component';
 import { YeniFaturaComponent } from 'app/yeni-fatura/yeni-fatura.component';
 import { FaturaListComponent } from 'app/fatura-list/fatura-list.component';
+import { FaturaDetailsComponent } from 'app/fatura-details/fatura-details.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -57,17 +58,18 @@ export const AdminLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    { path: 'dashboard',      component: DashboardComponent },
-    { path: 'user-profile',   component: UserProfileComponent },
-    { path: 'table-list',     component: TableListComponent },
-    { path: 'typography',     component: TypographyComponent },
-    { path: 'icons',          component: IconsComponent },
-    { path: 'notifications',  component: NotificationsComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
-    { path: 'yeni-rezervasyon', component: YeniRezervasyonComponent},
-    { path: 'mevcut-konaklayanlar',        component: MevcutKonaklayanlarComponent },
-    { path: 'guest-details', component: GuestDetailsComponent},
-    { path: 'guest-edit', component: GuestEditComponent},
-    { path: 'yeni-fatura', component: YeniFaturaComponent},
-    {path:'fatura-list', component: FaturaListComponent}
+    { path: 'dashboard', component: DashboardComponent },
+    { path: 'user-profile', component: UserProfileComponent },
+    { path: 'table-list', component: TableListComponent },
+    { path: 'typography', component: TypographyComponent },
+    { path: 'icons', component: IconsComponent },
+    { path: 'notifications', component: NotificationsComponent },
+    { path: 'upgrade', component: UpgradeComponent },
+    { path: 'yeni-rezervasyon', component: YeniRezervasyonComponent },
+    { path: 'mevcut-konaklayanlar', component: MevcutKonaklayanlarComponent },
+    { path: 'guest-details', component: GuestDetailsComponent },
+    { path: 'guest-edit', component: GuestEditComponent },
+    { path: 'yeni-fatura', component: YeniFaturaComponent },
+    { path: 'fatura-list', component: FaturaListComponent },
+    { path: 'fatura-details', component: FaturaDetailsComponent }
 ];

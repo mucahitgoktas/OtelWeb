@@ -31,13 +31,5 @@ export class Fatura {
     not2:string;
 }
 
-export class FaturaList {
-    id: number;
-    unvan: string;
-    adres: string;
-    vergiDairesi: string;
-    vergiNo:string;
-    not1:string;
-    not2:string;
-}
+
 

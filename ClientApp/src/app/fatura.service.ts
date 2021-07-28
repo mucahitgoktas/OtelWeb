@@ -21,7 +21,7 @@ export class FaturaService {
     return this.http.post<Fatura>(this.baseUrl + 'api/faturalar', fatura);
   }
 
-  updateFaturalar(fatura: Fatura) {
+  updateFatura(fatura: Fatura) {
     return this.http.put<Fatura>(this.baseUrl + 'api/faturalar/' + fatura.id, fatura)
     debugger;
 
