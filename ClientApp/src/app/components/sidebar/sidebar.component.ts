@@ -14,7 +14,7 @@ export const ROUTES: RouteInfo[] = [
   { path: '/mevcut-konaklayanlar', title: 'Mevcut Konaklayanlar', icon: 'badge', class: '' },
   //{ path: '/table-list', title: 'Table List',  icon:'content_paste', class: '' },
   { path: '/yeni-fatura', title: 'Fatura',  icon:'receipt', class: '' },
-  { path: '/typography', title: 'Typography', icon: 'library_books', class: '' },
+  { path: '/fatura-list', title: 'Fatura Listesi', icon: 'library_books', class: '' },
   { path: '/icons', title: 'Icons', icon: 'bubble_chart', class: '' },
   { path: '/notifications', title: 'Notifications', icon: 'notifications', class: '' },
   //{ path: '/upgrade', title: 'Upgrade to PRO', icon: 'unarchive', class: 'active-pro' },

@@ -12,6 +12,7 @@ import { MevcutKonaklayanlarComponent } from 'app/mevcut-konaklayanlar/mevcut-ko
 import { GuestDetailsComponent } from 'app/guest-details/guest-details.component';
 import { GuestEditComponent } from 'app/guest-edit/guest-edit.component';
 import { YeniFaturaComponent } from 'app/yeni-fatura/yeni-fatura.component';
+import { FaturaListComponent } from 'app/fatura-list/fatura-list.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -67,5 +68,6 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'mevcut-konaklayanlar',        component: MevcutKonaklayanlarComponent },
     { path: 'guest-details', component: GuestDetailsComponent},
     { path: 'guest-edit', component: GuestEditComponent},
-    { path: 'yeni-fatura', component: YeniFaturaComponent}
+    { path: 'yeni-fatura', component: YeniFaturaComponent},
+    {path:'fatura-list', component: FaturaListComponent}
 ];

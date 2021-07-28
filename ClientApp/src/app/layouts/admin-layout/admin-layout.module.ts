@@ -22,6 +22,7 @@ import { MevcutKonaklayanlarComponent } from 'app/mevcut-konaklayanlar/mevcut-ko
 import { GuestDetailsComponent } from 'app/guest-details/guest-details.component';
 import { GuestEditComponent } from 'app/guest-edit/guest-edit.component';
 import { YeniFaturaComponent } from 'app/yeni-fatura/yeni-fatura.component';
+import { FaturaListComponent } from 'app/fatura-list/fatura-list.component';
 
 
 @NgModule({
@@ -43,14 +44,15 @@ import { YeniFaturaComponent } from 'app/yeni-fatura/yeni-fatura.component';
     TableListComponent,
     TypographyComponent,
     IconsComponent,
-    // MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
     YeniRezervasyonComponent,
     MevcutKonaklayanlarComponent,
     GuestDetailsComponent,
     GuestEditComponent,
-    YeniFaturaComponent
+    YeniFaturaComponent,
+    FaturaListComponent
+
   ]
 })
 
