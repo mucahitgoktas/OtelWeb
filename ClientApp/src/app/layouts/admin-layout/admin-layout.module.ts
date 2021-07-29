@@ -24,6 +24,8 @@ import { GuestEditComponent } from 'app/guest-edit/guest-edit.component';
 import { YeniFaturaComponent } from 'app/yeni-fatura/yeni-fatura.component';
 import { FaturaListComponent } from 'app/fatura-list/fatura-list.component';
 import { FaturaDetailsComponent } from 'app/fatura-details/fatura-details.component';
+import { FaturaPrintComponent } from 'app/fatura-print/fatura-print.component';
+import {NgxPrintModule} from 'ngx-print';
 
 
 @NgModule({
@@ -38,6 +40,7 @@ import { FaturaDetailsComponent } from 'app/fatura-details/fatura-details.compon
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    NgxPrintModule
   ],
   declarations: [
     DashboardComponent,
@@ -53,7 +56,8 @@ import { FaturaDetailsComponent } from 'app/fatura-details/fatura-details.compon
     GuestEditComponent,
     YeniFaturaComponent,
     FaturaListComponent,
-    FaturaDetailsComponent
+    FaturaDetailsComponent,
+    FaturaPrintComponent
 
   ]
 })

@@ -10,7 +10,7 @@ import { Fatura } from 'app/model';
 export class FaturaListComponent implements OnInit {
   selectedFatura: Fatura;
   faturalar: Fatura[];
-  unvan : string;
+  unvan: string;
 
   constructor(private faturaService: FaturaService) { }
 
@@ -40,14 +40,16 @@ export class FaturaListComponent implements OnInit {
 
   }
 
-  Search(){
-    if (this.unvan !="") {
-      this.faturalar = this.faturalar.filter(res=>{
+  Search() {
+    if (this.unvan != "") {
+      this.faturalar = this.faturalar.filter(res => {
         return res.unvan.toLocaleLowerCase().match(this.unvan.toLocaleLowerCase());
       })
     } else if (this.unvan == "") {
       this.ngOnInit();
     }
-    };
+  };
+
+
 
 }

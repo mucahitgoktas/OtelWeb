@@ -12,12 +12,13 @@
 
                         <div class="row" style="width: 1024px;">
 
-                            
+
                             <div class="col-sm-4 p-4">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput type="text" placeholder="Arama" autocomplete="off" [(ngModel)]="unvan" (input)="Search()">
+                                    <input matInput type="text" placeholder="Arama" autocomplete="off"
+                                        [(ngModel)]="unvan" (input)="Search()">
                                 </mat-form-field>
-                              </div>
+                            </div>
                             <table class="table" style="margin-left: 1%;">
                                 <thead class="text-danger">
                                     <th>Ticari Ünvanı</th>
@@ -35,7 +36,8 @@
                                         <td>{{g.vergiNo}}</td>
                                         <td><button mat-raised-button class="btn btn-info" data-toggle="modal"
                                                 data-target="#gModal" (click)="onSelectFatura(g)">Düzenle</button></td>
-
+                                                <td><button mat-raised-button class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#gModal" (click)="onSelectFatura(g)">Yazdır</button></td>
                                         <div class="modal fade" id="gModal" tabindex="-1" role="dialog"
                                             aria-labelledby="gModalLabel" aria-hidden="true">
                                             <div class="modal-dialog modal-lg" role="document">
@@ -70,5 +72,8 @@
                     </div>
                 </div>
             </div>
+            
+
         </div>
     </div>
+</div>

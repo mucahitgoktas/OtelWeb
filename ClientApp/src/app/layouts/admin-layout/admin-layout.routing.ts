@@ -14,6 +14,7 @@ import { GuestEditComponent } from 'app/guest-edit/guest-edit.component';
 import { YeniFaturaComponent } from 'app/yeni-fatura/yeni-fatura.component';
 import { FaturaListComponent } from 'app/fatura-list/fatura-list.component';
 import { FaturaDetailsComponent } from 'app/fatura-details/fatura-details.component';
+import { FaturaPrintComponent } from 'app/fatura-print/fatura-print.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -71,5 +72,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'guest-edit', component: GuestEditComponent },
     { path: 'yeni-fatura', component: YeniFaturaComponent },
     { path: 'fatura-list', component: FaturaListComponent },
-    { path: 'fatura-details', component: FaturaDetailsComponent }
+    { path: 'fatura-details', component: FaturaDetailsComponent },
+    { path: 'fatura-print', component: FaturaPrintComponent }
+
 ];
