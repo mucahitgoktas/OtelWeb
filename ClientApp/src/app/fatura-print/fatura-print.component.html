@@ -1,19 +1,64 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
-<div id="print-section"> 
-    <h4>SELAM</h4>
-  </div>
-  
-   <!--
+<!-- <div *ngIf="fatura">
+
+    <td>{{fatura.unvan}}</td>
+    <td>{{fatura.adres}}</td>
+    <td>{{fatura.vergiDiresi}}</td>
+    <td>{{fatura.vergiNo}}</td>
+</div> -->
+
+<div class="col-md-6">
+    <mat-form-field class="example-full-width">
+        <input #fiyat matInput placeholder="Fiyat*" type="text" name="fiyat">
+    </mat-form-field>
+</div>
+<div class="col-md-6">
+    <mat-form-field class="example-full-width">
+        <input #kdv value="1" matInput placeholder="KDV %" type="text" name="kdv" disabled>
+    </mat-form-field>
+</div>
+<button mat-raised-button type="submit" class="btn btn-danger pull-right"
+                                (click)="kdvHesapla(fiyat.value,kdv.value);">Yazdır</button>
+
+
+<div id="print-section" *ngIf="fatura">
+    
+    <table border=3 bordercolor="Red" >
+        <tr>
+            <td width="250" align="center">{{fatura.unvan}}</td>
+        </tr>
+        <tr *ngFor="let format of formatsDate">
+            
+            <td width="100"></td>
+            <td width="100"></td>
+            <td width="100"></td>
+            
+            <td colspan="5" align="right" width="100">{{dateNow | date: format}}</td>
+            
+            
+            
+
+        </tr>
+        <tr>
+            
+            <td align="center">KONAKLAMA ÜCRETİ</td>
+            <td rowspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td align="center">Kitap</td>
+        </tr>
+        <tr>
+            <td align="center">UCRET</td>
+            <td></td>
+            <td align="center">Silgi</td>
+        </tr>
+    </table>
+</div>
+
+<!--
      2)- Add the directive name in your button (ngxPrint),
      3)- Affect your ID to printSectionId
    -->
-  <button printSectionId="print-section" ngxPrint>print</button> 
+<button printSectionId="print-section" ngxPrint>print</button>

@@ -23,7 +23,7 @@ export class FaturaService {
 
   updateFatura(fatura: Fatura) {
     return this.http.put<Fatura>(this.baseUrl + 'api/faturalar/' + fatura.id, fatura)
-    debugger;
+    
 
   }
 

@@ -16,6 +16,7 @@ export class FaturaDetailsComponent implements OnInit {
   constructor(private faturaService: FaturaService) { }
 
   ngOnInit(): void {
+    
   }
 
   editFatura(unvan, adres, vergiDairesi, vergiNo, not1, not2, id) {

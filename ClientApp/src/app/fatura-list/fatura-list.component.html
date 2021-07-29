@@ -36,12 +36,12 @@
                                         <td>{{g.vergiNo}}</td>
                                         <td><button mat-raised-button class="btn btn-info" data-toggle="modal"
                                                 data-target="#gModal" (click)="onSelectFatura(g)">Düzenle</button></td>
-                                                <td><button mat-raised-button class="btn btn-primary" data-toggle="modal"
-                                                    data-target="#gModal" (click)="onSelectFatura(g)">Yazdır</button></td>
+                                        <td><button mat-raised-button class="btn btn-primary" data-toggle="modal"
+                                                data-target="#gModalPrint" (click)="onSelectFatura(g)">Yazdır</button></td>
+                                            <!-- Modal başlangıcı -->
                                         <div class="modal fade" id="gModal" tabindex="-1" role="dialog"
                                             aria-labelledby="gModalLabel" aria-hidden="true">
                                             <div class="modal-dialog modal-lg" role="document">
-
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="gModalLabel">Düzenle</h5>
@@ -59,6 +59,31 @@
                                             </div>
                                         </div>
 
+                                        <!-- Modal bitişi -->
+
+                                            <!-- Modal başlangıcı -->
+                                            <div class="modal fade" id="gModalPrint" tabindex="-1" role="dialog"
+                                            aria-labelledby="gModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-lg" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="gModalLabel">Düzenle</h5>
+                                                        <button type="button" class="btn btn-danger"
+                                                            data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <fatura-print [fatura]="selectedFatura"
+                                                            [faturalar]="faturalar">
+                                                        </fatura-print>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Modal bitişi -->
+
 
 
                                         <td><button mat-raised-button class="btn btn-danger"
@@ -72,7 +97,7 @@
                     </div>
                 </div>
             </div>
-            
+
 
         </div>
     </div>
