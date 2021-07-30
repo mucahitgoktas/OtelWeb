@@ -8,6 +8,9 @@ using ServerApp.Data;
 using ServerApp.DTO;
 using ServerApp.Models;
 
+
+
+
 namespace ServerApp.Controllers
 {
     [ApiController]
@@ -74,7 +77,7 @@ namespace ServerApp.Controllers
             fatura.VergiNo = fatura2.VergiNo;
             fatura.Not1 = fatura2.Not1;
             fatura.Not2 = fatura2.Not2;
-            
+
             try
             {
                 await _context.SaveChangesAsync();
@@ -89,6 +92,7 @@ namespace ServerApp.Controllers
 
 
         }
+
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFatura(int id)

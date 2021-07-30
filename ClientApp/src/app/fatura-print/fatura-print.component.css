@@ -1,0 +1,11 @@
+td {text-align: center; height: 1cm; width: 1cm;}
+td.tarih {vertical-align:bottom; font-size: smaller; text-align:center;width:1.6cm;height:0.5cm;}
+td.unvan {vertical-align: top; font-size: small; text-align: left;width: 7.9cm;height: 2cm;}
+td.vergiBilgi {font-size: smaller; text-align: left; height: 0.5cm;}
+th.konaklama {font-style: oblique; text-align: left; font: bold;}
+td.ustBosluk {height: 4.1cm;}
+td.solBosluk {width: 2.5cm;}
+td.ortaBosluk {width: 7.1cm; }
+td.ortaYukseklik {height: 3.3cm;}
+td.kdvToplam {vertical-align: top; font-size: smaller;}
+td.kdvsiz {font-size: smaller;}

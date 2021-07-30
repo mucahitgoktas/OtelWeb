@@ -1,4 +1,3 @@
-
 <!-- <div *ngIf="fatura">
 
     <td>{{fatura.unvan}}</td>
@@ -7,10 +6,13 @@
     <td>{{fatura.vergiNo}}</td>
 </div> -->
 
+
 <div class="col-md-6">
     <mat-form-field class="example-full-width">
         <input #fiyat matInput placeholder="Fiyat*" type="text" name="fiyat">
     </mat-form-field>
+
+
 </div>
 <div class="col-md-6">
     <mat-form-field class="example-full-width">
@@ -18,47 +20,90 @@
     </mat-form-field>
 </div>
 <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                                (click)="kdvHesapla(fiyat.value,kdv.value);">Yazdır</button>
+    (click)="kdvHesapla(fiyat.value,kdv.value);">Yazdır</button>
+
+
 
 
 <div id="print-section" *ngIf="fatura">
-    
-    <table border=3 bordercolor="Red" >
+
+    <!-- TABLO BAŞLANGICI -->
+
+    <table border=0>
         <tr>
-            <td width="250" align="center">{{fatura.unvan}}</td>
-        </tr>
-        <tr *ngFor="let format of formatsDate">
             
-            <td width="100"></td>
-            <td width="100"></td>
-            <td width="100"></td>
-            
-            <td colspan="5" align="right" width="100">{{dateNow | date: format}}</td>
-            
-            
-            
+            <td class="ustBosluk"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
 
         </tr>
         <tr>
             
-            <td align="center">KONAKLAMA ÜCRETİ</td>
-            <td rowspan="3"></td>
+            <td class="unvan" >{{fatura.unvan}}</td>
+            <td class="ortaBosluk"></td>
+            <td ></td>
+            <td ></td>
+            <td class="tarih" align="bottom" >{{tarih | date:'shortDate'}}</td>
+
         </tr>
         <tr>
+            
+            <td class="vergiBilgi">{{fatura.vergiDairesi}} V.D. : {{fatura.vergiNo}}</td>
             <td></td>
             <td></td>
-            <td align="center">Kitap</td>
+            <td></td>
+            <td ></td>
         </tr>
         <tr>
-            <td align="center">UCRET</td>
+            
             <td></td>
-            <td align="center">Silgi</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            
+            <th class="konaklama">KONAKLAMA ÜCRETİ</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="kdvsiz">188,12</td>
+        </tr>
+        <tr>
+            
+            <td class="ortaYukseklik"></td>
+            <td></td>
+            <td ></td>
+            <td></td>
+            <td ></td>
+
+        </tr><tr>
+            
+            <td ></td>
+            <td></td>
+            <td ></td>
+            <td></td>
+            <td ></td>
+
+        </tr>
+        <tr>
+            
+            <th class="unvan">SEKSEN TL</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="kdvToplam">1,88 <br>190,00</td>
         </tr>
     </table>
+
+    <!-- TABLO BİTİŞİ -->
 </div>
 
 <!--
      2)- Add the directive name in your button (ngxPrint),
      3)- Affect your ID to printSectionId
    -->
-<button printSectionId="print-section" ngxPrint>print</button>
+<button [useExistingCss]="true" printSectionId="print-section" ngxPrint>print</button>

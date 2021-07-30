@@ -32,7 +32,7 @@ export class YeniRezervasyonComponent implements OnInit {
         
         this.guests.push(g);
       });
-      debugger;
+      
 
   }
 
