@@ -9,18 +9,18 @@
 
 <div class="col-md-6">
     <mat-form-field class="example-full-width">
-        <input #fiyat matInput placeholder="Fiyat*" type="text" name="fiyat">
+        <input matInput placeholder="Fiyat*" type="number" [(ngModel)]="fiyat" name="fiyat">
     </mat-form-field>
 
 
 </div>
 <div class="col-md-6">
     <mat-form-field class="example-full-width">
-        <input #kdv value="1" matInput placeholder="KDV %" type="text" name="kdv" disabled>
+        <input matInput placeholder="KDV %" type="number" [(ngModel)]="kdv" name="kdv">
     </mat-form-field>
 </div>
 <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-    (click)="kdvHesapla(fiyat.value,kdv.value);">Yazdır</button>
+    (click)="kdvHesapla();">Tamam</button>
 
 
 
@@ -70,7 +70,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td class="kdvsiz">188,12</td>
+            <td class="kdvsiz">{{kdvHaricVrg}}₺</td>
         </tr>
         <tr>
             
@@ -95,7 +95,7 @@
             <td></td>
             <td></td>
             <td></td>
-            <td class="kdvToplam">1,88 <br>190,00</td>
+            <td class="kdvToplam">{{kdvFiyatVrg}}₺ <br>{{sonuc}}₺ </td>
         </tr>
     </table>
 
