@@ -45,11 +45,17 @@ export class FaturaListComponent implements OnInit {
       this.faturalar = this.faturalar.filter(res => {
         return res.unvan.toLocaleLowerCase().match(this.unvan.toLocaleLowerCase());
       })
-    } else if (this.unvan == "") {
+    } else if (this.unvan == "" ) {
       this.ngOnInit();
+      
     }
+    
+
   };
 
-
+  // backspace basınca çalışan event
+  onKeydown(event) {
+    this.ngOnInit();
+  }
 
 }

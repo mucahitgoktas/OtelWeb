@@ -16,7 +16,7 @@
                             <div class="col-sm-4 p-4">
                                 <mat-form-field class="example-full-width">
                                     <input matInput type="text" placeholder="Arama" autocomplete="off"
-                                        [(ngModel)]="unvan" (input)="Search()">
+                                        [(ngModel)]="unvan" (keydown.backspace)="onKeydown($event)" (input)="Search()">
                                 </mat-form-field>
                             </div>
                             <table class="table" style="margin-left: 1%;">
