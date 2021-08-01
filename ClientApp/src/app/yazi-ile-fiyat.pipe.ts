@@ -19,7 +19,7 @@ export class YaziIleFiyatPipe implements PipeTransform {
           return 0 == digit ? "" : "" + (1 == digit ? doubleDigit[prevdigit] : tensPlace[digit])
         },
         handle_utlc = function (digit: any, nextdigit: any, denom: any) {
-          return (0 != digit && 1 != nextdigit ? "" + singleDigit[digit] : "") + (0 != nextdigit || digit > 0 ? "" + denom : "")
+          return (0 != digit && 1 != nextdigit ? "" + (1 == digit ? "" : singleDigit[digit]) : "") + (0 != nextdigit || digit > 0 ? "" + denom : "")
         };
       var lira = "",
         digitIndex = 0,
@@ -42,9 +42,7 @@ export class YaziIleFiyatPipe implements PipeTransform {
 
               const sifirmi = 0 != digit;
               const birmi = 1 == digit;
-
               words.push(sifirmi ? (birmi ? "" : singleDigit[digit]) + "Yüz" + (0 != price[digitIndex + 1] && 0 != price[digitIndex + 2] ? "" : "") : "");
-
               break;
             case 3:
               words.push(handle_utlc(digit, nextDigit, "Bin"));
