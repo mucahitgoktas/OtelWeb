@@ -1,29 +1,39 @@
 <!-- <div *ngIf="fatura">
-
     <td>{{fatura.unvan}}</td>
     <td>{{fatura.adres}}</td>
     <td>{{fatura.vergiDiresi}}</td>
     <td>{{fatura.vergiNo}}</td>
 </div> -->
 
-
+<div class="col-md-6">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="KDV %1" type="number" [(ngModel)]="kdv" name="kdv" disabled>
+    </mat-form-field>
+</div>
 <div class="col-md-6">
     <form (ngSubmit)="handleSubmit($event)">
         <mat-form-field class="example-full-width">
             <input matInput placeholder="Fiyat*" type="number" [(ngModel)]="fiyat" name="fiyat"
                 (keyup)="handleKeyUp($event)">
-            <button mat-raised-button type="submit" class="btn btn-danger pull-right"
-                (click)="kdvHesapla();">Tamam</button>
         </mat-form-field>
+        <div class="col-md-6">
+
+            <button mat-raised-button type="submit" class="btn btn-danger pull-right"
+                        (click)="kdvHesapla();">Tamam</button>
+        
+        </div>
     </form>
 </div>
-<div class="col-md-6">
-    <mat-form-field class="example-full-width">
-        <input matInput placeholder="KDV %" type="number" [(ngModel)]="kdv" name="kdv">
-    </mat-form-field>
-</div>
 
-<button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="kdvHesapla();">Tamam</button>
+
+
+
+
+
+
+
+
+
 
 
 <div id="print-section" *ngIf="fatura">
@@ -108,4 +118,4 @@
      2)- Add the directive name in your button (ngxPrint),
      3)- Affect your ID to printSectionId
    -->
-<button [useExistingCss]="true" printSectionId="print-section" ngxPrint>print</button>
+<button class="btn btn-primary pull-right" [useExistingCss]="true" printSectionId="print-section" ngxPrint>YAZDIR</button>

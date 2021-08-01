@@ -26,8 +26,8 @@ export class YaziIleFiyatPipe implements PipeTransform {
         digit = 0,
         nextDigit = 0,
         words = [],
-        paisaWords = [],
-        paisa = "";
+        paisaWords = [];
+        
       if (price += "", isNaN(parseFloat(price))) lira = "";
       else if (parseFloat(price) > 0 && price.length <= 10) {
         for (digitIndex = price.length - 1; digitIndex >= 0; digitIndex--)
@@ -83,15 +83,11 @@ export class YaziIleFiyatPipe implements PipeTransform {
               paisaWords.push(handle_tens(digit, pointer[digitIndex + 1]));
               break;
           }
-        // paisa = paisaWords.reverse().join("");
-        // if (lira)
-        //   lira = `${lira} and ${paisa} Paisa`
-        // else
-        //   lira = `${paisa} Paisa`
+        
       }
       return lira
-      debugger;
+     
     }
-    debugger;
+    
   }
 }
