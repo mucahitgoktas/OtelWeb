@@ -35,10 +35,7 @@ export class FaturaPrintComponent implements OnInit {
   kdvHaricVrg: string;
   kdvFiyatVrg: string;
 
-
-
-
-
+  
   kdvHesapla() {
     this.kdvHaric = this.fiyat / (1 + this.kdv / 100);
     this.kdvHaricVrg = this.kdvHaric.toFixed(4);

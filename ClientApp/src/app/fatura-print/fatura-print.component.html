@@ -19,10 +19,7 @@
         <input matInput placeholder="KDV %" type="number" [(ngModel)]="kdv" name="kdv">
     </mat-form-field>
 </div>
-<button mat-raised-button type="submit" class="btn btn-danger pull-right"
-    (click)="kdvHesapla();">Tamam</button>
-
-
+<button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="kdvHesapla();">Tamam</button>
 
 
 <div id="print-section" *ngIf="fatura">
@@ -31,7 +28,7 @@
 
     <table border=0>
         <tr>
-            
+
             <td class="ustBosluk"></td>
             <td></td>
             <td></td>
@@ -40,32 +37,32 @@
 
         </tr>
         <tr>
-            
-            <td class="unvan" >{{fatura.unvan}}</td>
+
+            <td class="unvan">{{fatura.unvan}}</td>
             <td class="ortaBosluk"></td>
-            <td ></td>
-            <td ></td>
-            <td class="tarih" align="bottom" >{{tarih | date:'shortDate'}}</td>
+            <td></td>
+            <td></td>
+            <td class="tarih" align="bottom">{{tarih | date:'shortDate'}}</td>
 
         </tr>
         <tr>
-            
+
             <td class="vergiBilgi">{{fatura.vergiDairesi}} V.D. : {{fatura.vergiNo}}</td>
             <td></td>
             <td></td>
             <td></td>
-            <td ></td>
-        </tr>
-        <tr>
-            
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
             <td></td>
         </tr>
         <tr>
-            
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+
             <th class="konaklama">KONAKLAMA ÜCRETİ</th>
             <td></td>
             <td></td>
@@ -73,25 +70,26 @@
             <td class="kdvsiz">{{kdvHaricVrg}}₺</td>
         </tr>
         <tr>
-            
+
             <td class="ortaYukseklik"></td>
             <td></td>
-            <td ></td>
             <td></td>
-            <td ></td>
-
-        </tr><tr>
-            
-            <td ></td>
             <td></td>
-            <td ></td>
             <td></td>
-            <td ></td>
 
         </tr>
         <tr>
-            
-            <th class="unvan">SEKSEN TL</th>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+
+            <th class="unvan">{{fiyat | yaziIleFiyat}}</th>
             <td></td>
             <td></td>
             <td></td>
