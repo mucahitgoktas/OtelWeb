@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+
 @Pipe({
   name: 'yaziIleFiyat'
 })
@@ -38,7 +39,12 @@ export class YaziIleFiyatPipe implements PipeTransform {
               words.push(handle_tens(digit, price[digitIndex + 1]));
               break;
             case 2:
-              words.push(0 != digit ? singleDigit[digit] + "Yüz" + (0 != price[digitIndex + 1] && 0 != price[digitIndex + 2] ? "":"") :"");
+
+              const sifirmi = 0 != digit;
+              const birmi = 1 == digit;
+
+              words.push(sifirmi ? (birmi ? "" : singleDigit[digit]) + "Yüz" + (0 != price[digitIndex + 1] && 0 != price[digitIndex + 2] ? "" : "") : "");
+
               break;
             case 3:
               words.push(handle_utlc(digit, nextDigit, "Bin"));
@@ -60,6 +66,7 @@ export class YaziIleFiyatPipe implements PipeTransform {
               break;
             case 9:
               words.push(0 != digit ? singleDigit[digit] + "Yüz" + (0 != price[digitIndex + 1] || 0 != price[digitIndex + 2] ? "" : " Onmilyon") : "")
+
           }
         lira = words.reverse().join("")
       } else lira = "";
@@ -85,6 +92,8 @@ export class YaziIleFiyatPipe implements PipeTransform {
         //   lira = `${paisa} Paisa`
       }
       return lira
+      debugger;
     }
+    debugger;
   }
 }
