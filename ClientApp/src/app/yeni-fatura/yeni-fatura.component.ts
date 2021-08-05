@@ -30,7 +30,7 @@ export class YeniFaturaComponent implements OnInit {
         
         this.faturalar.push(g);
       });
-      debugger;
+      
 
   }
 

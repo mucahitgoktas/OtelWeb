@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GuestService } from 'app/guest.service';
 import { Guest } from 'app/model';
+import { SearchFilterPipe } from 'app/search-filter.pipe';
 
 
 @Component({
@@ -12,6 +13,7 @@ export class MevcutKonaklayanlarComponent implements OnInit {
 
   selectedGuest: Guest;
   guests: Guest[];
+  search: SearchFilterPipe;
 
   constructor(private guestService: GuestService) { }
 
@@ -40,6 +42,18 @@ export class MevcutKonaklayanlarComponent implements OnInit {
     });
 
   }
+
+  searchValue: string;
+
+  // backspace basınca çalışan event
+  onKeydown(event) {
+    
+    this.search.transform(this.guests, this.searchValue);
+    
+  }
+
+
+
 
 
 

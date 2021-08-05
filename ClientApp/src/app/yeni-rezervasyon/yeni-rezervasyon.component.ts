@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { GuestService } from 'app/guest.service';
 import { Guest } from 'app/model';
+import { filter } from 'rxjs/operators';
+
 
 @Component({
   selector: 'yeni-rezervasyon',
@@ -14,6 +16,9 @@ export class YeniRezervasyonComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  title = "Misafir Kayıt";
+  aboutT = "Yeni Misafir Kaydı";
+
   addGuest(adi, soyadi, ciltno, tckimlikno, heskodu, notlar, dogumyeri, odano, ucret) {
     let g = new Guest();
     g.adi = adi;
@@ -26,17 +31,27 @@ export class YeniRezervasyonComponent implements OnInit {
     g.notlar = notlar;
     g.ucret = ucret;
     g.guestId = 0;
-    
+
     this.guestService.addGuest(g)
       .subscribe(guest => {
-        
+
         this.guests.push(g);
       });
-      
+
 
   }
 
-  title = "Misafir Kayıt";
-  aboutT = "Yeni Misafir Kaydı";
+  
 
-}
+
+
+
+
+
+};
+
+
+
+
+
+

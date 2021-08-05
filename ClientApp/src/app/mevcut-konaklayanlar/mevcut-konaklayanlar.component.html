@@ -1,72 +1,79 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8">
-                <div class="card">
-                    <div class="card-header card-header-danger">
-                        <h4 class="card-title">{{title}}</h4>
-                        <p class="card-category">Konaklayan Misafirlerimizin Listesi</p>
-                    </div>
+            <label for="search" class="col-md-8" style="text-align: left; font-size: 1.1em;">Arama</label>
+                <div class="col-md-8">
+                    <input type="text" [(ngModel)]="searchValue" (keyup.control.1)="onKeydown($event)" class="form-control" id="search" />
+                </div>
 
-                    <div class="card-content table-responsive table-full-width">
-                        <table class="table">
-                            <thead class="text-danger">
-                                <th>No</th>
-                                <th>Oda</th>
-                                <th>Misafirin Adı Soyadı</th>
-                                <th>Tc Kimlik No</th>
-                                <th>Hes Kodu</th>
-                                <th>Gecelik Ücret</th>
-                            </thead>
+                    <div class="col-md-8">
 
-                            <tbody>
-                                <tr *ngFor="let g of guests">
-                                    <td>{{g.guestId}}</td>
-                                    <td>{{g.odaNo}}</td>
-                                    <td>{{g.adi}} {{g.soyadi}}</td>
-                                    <td>{{g.tcKimlikNo}}</td>
-                                    <td>{{g.hesKodu}}</td>
-                                    <td class="text-danger">{{g.ucret}}₺</td>
-                                    <!-- <td><button mat-raised-button class="btn btn-info" (click)="onSelectGuest(g)">Düzenle</button></td> -->
-                                    <td><button mat-raised-button class="btn btn-info" data-toggle="modal"
-                                            data-target="#gModal" (click)="onSelectGuest(g)">Düzenle</button></td>
+                        <div class="card">
+                            <div class="card-header card-header-danger">
+                                <h4 class="card-title">{{title}}</h4>
+                                <p class="card-category">Konaklayan Misafirlerimizin Listesi</p>
+                            </div>
 
-                                    <div class="modal fade" id="gModal" tabindex="-1" role="dialog"
-                                        aria-labelledby="gModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="card-content table-responsive table-full-width">
+                                <table class="table">
+                                    <thead class="text-danger">
+                                        <th>No</th>
+                                        <th>Oda</th>
+                                        <th>Misafirin Adı Soyadı</th>
+                                        <th>Tc Kimlik No</th>
+                                        <th>Hes Kodu</th>
+                                        <th>Gecelik Ücret</th>
+                                    </thead>
 
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="gModalLabel">Düzenle</h5>
-                                                    <!-- <button type="button" class="btn btn-default"
+                                    <tbody>
+                                        <tr *ngFor="let g of guests | searchFilter:searchValue">
+                                            <td>{{g.guestId}}</td>
+                                            <td>{{g.odaNo}}</td>
+                                            <td>{{g.adi}} {{g.soyadi}}</td>
+                                            <td>{{g.tcKimlikNo}}</td>
+                                            <td>{{g.hesKodu}}</td>
+                                            <td class="text-danger">{{g.ucret}}₺</td>
+                                            <!-- <td><button mat-raised-button class="btn btn-info" (click)="onSelectGuest(g)">Düzenle</button></td> -->
+                                            <td><button mat-raised-button class="btn btn-info" data-toggle="modal"
+                                                    data-target="#gModal" (click)="onSelectGuest(g)">Düzenle</button>
+                                            </td>
+
+                                            <div class="modal fade" id="gModal" tabindex="-1" role="dialog"
+                                                aria-labelledby="gModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog modal-lg" role="document">
+
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="gModalLabel">Düzenle</h5>
+                                                            <!-- <button type="button" class="btn btn-default"
                                                        data-dismiss="modal">Close</button> -->
 
 
-                                                    <button type="button" class="btn btn-danger" data-dismiss="modal"
-                                                        aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <guest-details [guest]="selectedGuest" [guests]="guests">
-                                                    </guest-details>
+                                                            <button type="button" class="btn btn-danger"
+                                                                data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <guest-details [guest]="selectedGuest" [guests]="guests">
+                                                            </guest-details>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
 
 
 
-                                    <td><button mat-raised-button class="btn btn-danger"
-                                            (click)="deleteGuest(g)">Sil</button></td>
+                                            <td><button mat-raised-button class="btn btn-danger"
+                                                    (click)="deleteGuest(g)">Sil</button></td>
 
 
-                                </tr>
-                            </tbody>
-                        </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
     </div>
-</div>
