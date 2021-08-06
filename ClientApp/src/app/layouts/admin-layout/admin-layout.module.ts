@@ -28,6 +28,7 @@ import { FaturaPrintComponent } from 'app/fatura-print/fatura-print.component';
 import {NgxPrintModule} from 'ngx-print';
 import { YaziIleFiyatPipe } from 'app/yazi-ile-fiyat.pipe';
 import { SearchFilterPipe } from 'app/search-filter.pipe';
+import { GunlukMusteriListesiComponent } from 'app/gunluk-musteri-listesi/gunluk-musteri-listesi.component';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { SearchFilterPipe } from 'app/search-filter.pipe';
     FaturaDetailsComponent,
     FaturaPrintComponent,
     YaziIleFiyatPipe,
-    SearchFilterPipe
+    SearchFilterPipe,
+    GunlukMusteriListesiComponent,
 
   ]
 })
