@@ -11,11 +11,12 @@ export class SearchFilterPipe implements PipeTransform {
       return guests;
     }
 
-    const adiSoyadi = Guest;
-
+      
     return guests.filter(guest =>
       guest.tcKimlikNo.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ||
-      guest.adi.concat(guest.soyadi).toLocaleLowerCase().includes(searchValue.replace(/\s/g, "").toLocaleLowerCase())
+      guest.adi.concat(guest.soyadi).toLocaleLowerCase().includes(searchValue.replace(/\s/g, "").toLocaleLowerCase()),
+     
+      
 
     );
 
