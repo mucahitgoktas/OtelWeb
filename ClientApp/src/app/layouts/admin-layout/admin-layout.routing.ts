@@ -16,6 +16,7 @@ import { FaturaListComponent } from 'app/fatura-list/fatura-list.component';
 import { FaturaDetailsComponent } from 'app/fatura-details/fatura-details.component';
 import { FaturaPrintComponent } from 'app/fatura-print/fatura-print.component';
 import { GunlukMusteriListesiComponent } from 'app/gunluk-musteri-listesi/gunluk-musteri-listesi.component';
+import { RezervasyonComponent } from 'app/rezervasyon/rezervasyon.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -76,5 +77,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'fatura-details', component: FaturaDetailsComponent },
     { path: 'fatura-print', component: FaturaPrintComponent },
     { path: 'gunluk-musteri-listesi', component: GunlukMusteriListesiComponent },
+    { path: 'rezervasyon', component: RezervasyonComponent },
+
 
 ];

@@ -29,6 +29,7 @@ import {NgxPrintModule} from 'ngx-print';
 import { YaziIleFiyatPipe } from 'app/yazi-ile-fiyat.pipe';
 import { SearchFilterPipe } from 'app/search-filter.pipe';
 import { GunlukMusteriListesiComponent } from 'app/gunluk-musteri-listesi/gunluk-musteri-listesi.component';
+import { RezervasyonComponent } from 'app/rezervasyon/rezervasyon.component';
 
 
 @NgModule({
@@ -64,6 +65,7 @@ import { GunlukMusteriListesiComponent } from 'app/gunluk-musteri-listesi/gunluk
     YaziIleFiyatPipe,
     SearchFilterPipe,
     GunlukMusteriListesiComponent,
+    RezervasyonComponent,
 
   ]
 })

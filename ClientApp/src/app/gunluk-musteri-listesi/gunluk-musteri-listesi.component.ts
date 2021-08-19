@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GuestService } from 'app/guest.service';
-import { Guest } from 'app/model';
+import { Guest } from 'app/models/model';
 
 @Component({
   selector: 'gunluk-musteri-listesi',
