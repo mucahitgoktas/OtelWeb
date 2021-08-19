@@ -14,7 +14,7 @@ namespace ServerApp.Controllers
     [Route("api/[controller]")]
     public class GuestsController:ControllerBase
     {
-        private OtelContext _context;
+        private readonly OtelContext _context;
         public GuestsController(OtelContext context)
         {
            _context = context;
@@ -36,6 +36,7 @@ namespace ServerApp.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetGuest(int id)
         {
+            
             var p = await _context.Guests.FindAsync(id);
             if (p==null)
             {
@@ -46,6 +47,7 @@ namespace ServerApp.Controllers
         }
 
         [HttpPost]
+
         public async Task<IActionResult> CreateGuest(Guest guest1)
         {
             _context.Guests.Add(guest1);
