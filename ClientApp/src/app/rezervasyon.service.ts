@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 import { environment } from 'environments/environment';
 import { map } from 'rxjs/operators';
 import { BehaviorSubject } from 'rxjs';
-import { Irezervasyon, Rezervasyon } from './models/rezervasyon';
+import { Irezervasyon, IrezervasyonItem, Rezervasyon, RezervasyonItem } from './models/rezervasyon';
+import { Guest } from './models/model';
+
 
 @Injectable({
   providedIn: 'root'
@@ -25,18 +27,26 @@ export class RezervasyonService {
       );
   }
 
-  setRezervasyon(rezervasyon:Irezervasyon){
-    return this.http.post(this.baseUrl + 'rezervasyon', rezervasyon).subscribe((response : Irezervasyon)=>{
+  setRezervasyon(rezervasyon: Irezervasyon) {
+    return this.http.post(this.baseUrl + 'rezervasyon', rezervasyon).subscribe((response: Irezervasyon) => {
       this.rezervasyonSource.next(response);
-    },error=>{
+      console.log(response)
+    }, error => {
       console.log(error);
     })
   }
 
-  getCurrentRezervasyonValue(){
+  getCurrentRezervasyonValue() {
     return this.rezervasyonSource.value;
   }
 
+  addItemToRezervasyon(item: Guest) {
+    const additem: IrezervasyonItem = this.mapGuestToRezervasyonItem(RezervasyonItem)
   }
+  mapGuestToRezervasyonItem(rezervasyonItem: any): IrezervasyonItem {
+    throw new Error('Method not implemented.');
+  }
+
+}
 
 

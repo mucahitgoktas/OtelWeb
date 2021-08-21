@@ -1,7 +1,8 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { FaturaService } from 'app/fatura.service';
-import { Fatura } from 'app/model';
+import { Fatura } from 'app/models/model';
+
 
 @Component({
   selector: 'fatura-details',

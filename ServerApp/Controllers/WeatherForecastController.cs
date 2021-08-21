@@ -29,7 +29,7 @@ namespace ServerApp.Controllers
         {
             // log4net başlangıç
 
-            log4net.Config.XmlConfigurator.Configure(new FileInfo())
+            //log4net.Config.XmlConfigurator.Configure(new FileInfo());
 
             // log4net bitiş
 

@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FaturaService } from 'app/fatura.service';
-import { Fatura } from 'app/model';
+import { Fatura } from 'app/models/model';
+
 
 @Component({
   selector: 'yeni-fatura',

@@ -168,5 +168,8 @@ C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\runtimes\
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.AssemblyReference.cache
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\log4net.dll
+C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csprojAssemblyReference.cache
+C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\log4net.config
+C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\Properties\app.config
+C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.dll.config

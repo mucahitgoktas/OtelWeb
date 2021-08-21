@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GuestService } from 'app/guest.service';
 import { Guest } from 'app/models/model';
+import { RezervasyonService } from 'app/rezervasyon.service';
 
 @Component({
   selector: 'gunluk-musteri-listesi',
@@ -17,6 +18,8 @@ export class GunlukMusteriListesiComponent implements OnInit {
   ngOnInit(): void {
     this.getGuests();
   }
+
+  
 
 
   getGuests() {

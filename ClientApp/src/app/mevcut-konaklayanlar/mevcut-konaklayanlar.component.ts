@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GuestService } from 'app/guest.service';
-import { Guest } from 'app/model';
+import { Guest } from 'app/models/model';
+import { RezervasyonService } from 'app/rezervasyon.service';
 import { SearchFilterPipe } from 'app/search-filter.pipe';
 
 
@@ -15,10 +16,15 @@ export class MevcutKonaklayanlarComponent implements OnInit {
   guests: Guest[];
   search: SearchFilterPipe;
 
-  constructor(private guestService: GuestService) { }
+  constructor(private guestService: GuestService, private rezervasyonService : RezervasyonService) { }
 
   ngOnInit(): void {
     this.getGuests();
+  }
+
+  addItemToRezervasyon(){
+    this.rezervasyonService.addItemToRezervasyon(this.selectedGuest)
+    debugger;
   }
 
 

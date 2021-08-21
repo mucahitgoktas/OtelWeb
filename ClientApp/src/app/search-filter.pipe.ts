@@ -1,5 +1,6 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Guest } from './model';
+import { Guest } from './models/model';
+
 
 @Pipe({
   name: 'searchFilter'
