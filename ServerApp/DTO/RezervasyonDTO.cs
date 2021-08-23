@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ServerApp.Interfaces;
+using ServerApp.Models;
 
-namespace ServerApp.Models
+namespace ServerApp.DTO
 {
-    
-
-    public class Rezervasyon
+    public class RezervasyonDTO
     {
         public int RezId { get; set; }
         public string TcKimlikNo { get; set; }
@@ -19,9 +17,5 @@ namespace ServerApp.Models
         public int GuestId { get; set; }
         public List<RezervasyonList> RezervasyonLists { get; set; }
         public Guest Guest { get; set; }
-
-
     }
-
-   
 }

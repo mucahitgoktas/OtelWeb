@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace ServerApp.Models
@@ -16,5 +17,6 @@ namespace ServerApp.Models
         public string CiltNo { get; set; }
         public string Notlar { get; set; }
         public string Secret { get; set; }
+        public List<Rezervasyon> Rezervasyons { get; set; }
     }
 }

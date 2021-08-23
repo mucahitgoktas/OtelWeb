@@ -11,5 +11,7 @@ namespace ServerApp.Data
         }
         public DbSet<Guest> Guests { get; set; }
         public DbSet<Fatura> Faturalar { get; set; }
+        public DbSet<Rezervasyon> Rezervasyonlar { get; set; }
+        public DbSet<RezervasyonList> RezervasyonLists { get; set; }
     }
 }
