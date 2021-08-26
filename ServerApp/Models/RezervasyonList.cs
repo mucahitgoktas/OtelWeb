@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,6 +8,7 @@ namespace ServerApp.Models
 {
     public class RezervasyonList
     {
+        [Key]
         public int RezListId { get; set; }
         public string TcKimlikNo { get; set; }
         public int OdaNo { get; set; }

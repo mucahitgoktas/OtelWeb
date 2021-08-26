@@ -12,7 +12,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ServerApp.Data;
-using ServerApp.Implements;
 using ServerApp.Interfaces;
 using StackExchange.Redis;
 
@@ -34,15 +33,15 @@ namespace ServerApp
         {
             services.AddDbContext<OtelContext>(x => x.UseSqlite("Data Source=otel.db"));
             services.AddControllers().AddNewtonsoftJson();
-            services.AddScoped<IRezervasyonRepository, RezervasyonRepository>();
-            services.AddSingleton<IConnectionMultiplexer>(x =>
-                {
-                    var configuration = ConfigurationOptions.Parse(Configuration.GetConnectionString("Redis"), true);
-                    return ConnectionMultiplexer.Connect(configuration);
-                }
-                
-                
-                );
+            //services.AddScoped<IRezervasyonRepository, RezervasyonRepository>();
+            //services.AddSingleton<IConnectionMultiplexer>(x =>
+            //    {
+            //        var configuration = ConfigurationOptions.Parse(Configuration.GetConnectionString("Redis"), true);
+            //        return ConnectionMultiplexer.Connect(configuration);
+            //    }
+
+
+            //    );
             services.AddCors(options =>
             {
                 options.AddPolicy(
@@ -52,11 +51,11 @@ namespace ServerApp
                         builder
                         .AllowAnyOrigin()
                         .AllowAnyMethod()
-                        .AllowAnyHeader();                        
+                        .AllowAnyHeader();
 
                     });
             });
-            
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -76,7 +75,7 @@ namespace ServerApp
             app.UseCors(MyAllowOrigins);
 
             app.UseAuthorization();
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
