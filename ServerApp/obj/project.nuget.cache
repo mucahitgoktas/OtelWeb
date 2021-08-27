@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PZgSHLCO7R8qM3C7XXwRzaSTLX11eVY9BpurkrtYe3P9HjknnKyV03x144i+JDwz0oxd7QAAMzSe9O2k6GrvNw==",
+  "dgSpecHash": "copCN+20sRS3wr3JEFkL83Vmuw0IkvoA7iBoRI+5dK/mGD3y/TvUKQlzIpA1BNPO8tLY1u+ZNnb2IsSFBWLe+g==",
   "success": true,
   "projectFilePath": "C:\\Users\\pc\\Documents\\GitHub\\OtelWeb\\ServerApp\\ServerApp.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\pc\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.14\\microsoft.visualstudio.azure.containers.tools.targets.1.10.14.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\pc\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",

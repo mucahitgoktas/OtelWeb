@@ -12,7 +12,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using ServerApp.Data;
-using ServerApp.Interfaces;
 using StackExchange.Redis;
 
 namespace ServerApp
@@ -33,15 +32,14 @@ namespace ServerApp
         {
             services.AddDbContext<OtelContext>(x => x.UseSqlite("Data Source=otel.db"));
             services.AddControllers().AddNewtonsoftJson();
-            //services.AddScoped<IRezervasyonRepository, RezervasyonRepository>();
-            //services.AddSingleton<IConnectionMultiplexer>(x =>
-            //    {
-            //        var configuration = ConfigurationOptions.Parse(Configuration.GetConnectionString("Redis"), true);
-            //        return ConnectionMultiplexer.Connect(configuration);
-            //    }
+            // redisle ilgili olan baðlantý kodlarý
+            var redis = ConnectionMultiplexer.Connect("localhost");
+            services.AddScoped<IDatabase>(s => redis.GetDatabase());
+            // redisle ilgili olan baðlantý kodlarý
 
 
-            //    );
+
+
             services.AddCors(options =>
             {
                 options.AddPolicy(

@@ -172,4 +172,4 @@ C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\log4net.d
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\log4net.config
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\Properties\app.config
 C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\bin\Debug\netcoreapp3.1\ServerApp.dll.config
-C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csproj.AssemblyReference.cache
+C:\Users\pc\Documents\GitHub\OtelWeb\ServerApp\obj\Debug\netcoreapp3.1\ServerApp.csprojAssemblyReference.cache
